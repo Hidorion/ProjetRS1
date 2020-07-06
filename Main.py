@@ -6,6 +6,7 @@ import Readme
 import Variables
 import Doors
 import GettingPlayer
+import TheMap
 
 #ImportModules
 
@@ -17,3 +18,5 @@ import GettingPlayer
 #GettingPlayer.GettingPlayersName()
 #Giving infos
 #Readme.GettingInfo()
+
+TheMap.printmap()
