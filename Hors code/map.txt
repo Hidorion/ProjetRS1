@@ -1,0 +1,31 @@
+MMMMMMMMMMMMMMMMMMMMMMMMSSSSSMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM 0
+MMMMMMMMMMMMMMMMMMMMMMMMSSSSSMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM 1 
+MMMMMMMMMMMMMMMMMMMMMMMMSSSSSMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM 2
+MMMMM                   ░SSSSSMMMMMMMMMMTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTMMMMM 3 
+MMMMM                   ░SSSSS░        TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTMMMMMMM 4
+MMMMM                   ░SSSSS░           TTTTTTTTTTTTT       TTTTTTTTTT     TTTTTTTTMMMMM 5
+MMMMM                  ░SSSSS░                 TTTTTT    TTTT     TTTT        TTTTTMMMMMMM 6
+MMMMM                 ░SSSSS░                           TT     TT              TTTTTTMMMMM 7
+MMMMM                ░SSSSS░                                                    TTTTTMMMMM 8
+MMMMMT              ░SSSSS░                                                      TTTTMMMMM 9
+MMMMMTT              =====                                                        TTTMMMMM 10
+MMMMMTTT             =====                                                         TTMMMMM 11
+MMMMMTTTT           =======                                                         TMMMMM 12
+MMMMMTTTTT         =========                                                        MMMMMM 13
+MMMMMTTTTTT        =========                                                         MMMMM 14
+MMMMMTTTTTTT        =======                                                           MMMM 15
+MMMMMTTTTTTTT        =====                                                          ░░░MMM 16
+MMMMMTTTTTTTTT       =====                                                       ░░░░░░░MM 17
+MMMMMTTTTTTTTTT     ░SSSSS░                                                   ░░░░░░░░░░░M 18
+MMMMMTTTTTTTTTTT   ░░SSSSS░░░                                              ░░░░░░░░░░░░░MM 19
+MMMMMTTTTTTTTTTTT ░░░SSSSS░░░░░                                          ░░░░░░░░░░░░░░MMM 20
+MMMMMTTTTTTTTTTTT░░░░SSSSS░░░░░░░                                      ░░░░░░░░░░░░░░MMMMM 21
+MMMMMTTTTTTTTTTT░░░░░SSSSS░░░░░░░░░                                  ░░░░░░░░░░░░░░░░MMMMM 22
+MMMMMTTTTTTTTTT░░░░░░░SSSSS░░░░░░░░░░                             ░░░░░░░░░░░░░░░░░░░MMMMM 23
+MMMMMTTTTTTTTT░░░░░░░░SSSSS░░░░░░░░░░░░                         ░░░░░░░░░░░░░░░░░░░MMMMMMM 24
+MMMMMTTTTTTTT░░░░░░░░░░░SSSSS░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░MMMMMMM 25
+MMMMM░░░░░░░░░░░░░░░░░░░░SSSSS░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░MMMMMMM 26
+MMMMM░░░░░░░░░░░░░░░░░░░░░SSSSS░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░MMMMMMM 27
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 28
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 29
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 18
