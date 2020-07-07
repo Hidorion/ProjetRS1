@@ -6,7 +6,6 @@ import Readme
 import Variables
 import Doors
 import GettingPlayer
-import TheMap
 import GettingMap
 #ImportModules
 
@@ -19,7 +18,7 @@ import GettingMap
 #Giving infos
 #Readme.GettingInfo()
 
-#TheMap.printmap()
+
 
 GettingMap.LoadMapFromFile("map.txt")
-GettingMap.DrawMaze()
+GettingMap.DrawMap()

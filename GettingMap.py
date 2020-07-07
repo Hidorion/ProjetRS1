@@ -1,3 +1,4 @@
+
 def LoadMapFromFile(FileName):
     """
         Loads a generic map from specified file name
@@ -19,65 +20,79 @@ def LoadMapFromFile(FileName):
                         CharacterPosition["Y"] = Y
                     X += 1
                 # add line to map
-                MazeMap.append(Columns)
+                MapMap.append(Columns)
                 Y += 1
-def DrawMaze():
+def DrawMap():
     """
-        Draw maze on console from 2 dimensional list
+        Draw Map on console from 2 dimensional list
     """
 
-    # draw maze
-    for Y in range(len(MazeMap)):
-        for X in range(len(MazeMap[Y])):
-            if (Y == CharacterPosition["Y"]
-                and X == CharacterPosition["X"]):
-                # this is character position, draw it
-                print(CharacterSymbol, end="")
-            else:
-                # no character here, draw maze
-                print(MazeElements[MazeMap[Y][X]]["Image"], end="")
+    # draw Map
+    for Y in range(len(MapMap)):
+        for X in range(len(MapMap[Y])):        
+            print(f'{MapElements[MapMap[Y][X]]["Image"]}', end="" )
         print()
 
-    # show message if any
-    #if GameMessage != "":
-    #    print(GameMessage)
-    #    GameMessage = ""
-    #else:
-    #    print()
-MazeElements = {
+def pointchanger (y,x,sample,map):
+    map[y][x] = sample
+
+MapElements = {
     " " : {
         "Name" : "Ground",
         "Image" : " ",
         "CanWalk" : True},
     "*" : {
         "Name" : "Sand",
-        "Image" : "▒",
+        "Couleur" : "\u001b[33m",
+        "Image" : "░",
         "CanWalk" : True},
     "T" : {
         "Name" : "Tree",
-        "Image" : "T",
-        "CanWalk" : True
-        },
+        "Couleur" : "\u001b[0m",
+        "Image" : "♣",
+        "CanWalk" : True},
     "M" : {
         "Name" : "Montain",
-        "Image" : "M",
+        "Couleur" : "\u001b[0m",
+        "Image" : "▲",
         "CanWalk" : True},
     "S" : {
-        "Name" : "Potable Water",
-        "Image" : "S",
+        "Name" : "Potable Water ",
+        "Couleur" : "\u001b[0m",
+        "Image" : "~",
         "CanWalk" : False},
     "=" : {
         "Name" : "Bridge",
-        "Image" : "=",
+        "Couleur" : "\u001b[0m",
+        "Image" : "═",
         "CanWalk" : True},
     "~" : {
         "Name" : "Sea",
-        "Image" : "~",
-        "CanWalk" : False}
+        "Couleur" : "\u001b[0m",
+        "Image" : "ʬ",
+        "CanWalk" : False},
     }
 
-    # print(Variables.MazeMap)
+    # print(Variables.MapMap)
 CharacterPosition = {"X" : 0, "Y" : 0}
-MazeMap = []
-CharacterSymbol = "☻"
+MapMap = []
 CharacterPosition = {"X" : 0, "Y" : 0}
+#pointchanger(1,1,"☻",MapMap)
+#pointchangerpointchanger(2,random.randint(50,90),"○",MapMap) #Position César Code
+#pointchangerpointchanger(random.randint(10,16),92,"◌",MapMap) #Position Sphinx Nombre Mystérieux
+
+""" 
+Eau potable = ~
+Eau de mer = ʬ
+Montagne = M
+Sable = ░
+Plaine = " "
+Porte 1 César = ○
+Porte 2 ????  = ◌
+Porte 3 FB-ZZ = ●
+Objet consommable = ©
+Objet récupérable = ʘ
+Grande Porte = ۩
+Arbre = ♣
+Pont = ═
+"""
