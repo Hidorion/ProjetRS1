@@ -1,0 +1,28 @@
+                      __Ӂ__
+                     ."/◊/".
+                    /<◙> <◙>\
+                   /-!  ░  !-\
+                  /-- \_ᵕ_/ --\
+                  )---│▒║▒│---(
+                 /-\--│▒║▒│--/-\
+                (_-_--│▒╨▒│--___)
+                /=====/███\=====\
+               (░░░░░/█/░\█\░░░░░)
+               )▒▒▒▒▒|█|▒▒|█|▒▒▒▒(
+              (▒▒▒▒▒▒▒▒▒▒/█/▒▒▒▒▒▒)
+              /▓▓▓▓▓▓▓▓▓/█/▓▓▓▓▓▓▓\
+             (/_____/\_|█|_/\_____\)
+            //_____//// ▲ \\\<-O┬╥->\
+           (_/_/_/_///◄ ? ►\\\_\_\_\_)
+           |▒│▒│▒│▓//   ▼   \\▓│▒│▒│▒|
+           (▒│▒│▓│▓/         \▓│▓│▒│▒)
+┌─────────────────────────────────────────────────┐
+│Bonjour explorateur !                            │
+│Pour ouvrir la porte de la montagne.             │
+│Et ainsi rejoindre tes compagnons.               │
+│Tu devras d’abord prouver ta valeur individuelle.│
+│Pour cela il te faut les 3 clés.                 │
+│Tu les obtiendras en relevant leurs défis.       │
+│Ceci est le premier d’entre eux.                 │
+│Les 2 autres sont derrières 2 autres portes.     │
+└─────────────────────────────────────────────────┘

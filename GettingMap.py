@@ -28,7 +28,7 @@ def DrawMap():
         for X in range(len(Variables.MapMap[Y])):        
             if (Y == Variables.PlayerPosition["Y"] and X == Variables.PlayerPosition["X"]):
                 print(Variables.PlayerIcon, end="")
-            else:# no character here, draw maze
+            else:# no player here, draw maze
                 print(f'{MapElements[Variables.MapMap[Y][X]]["Image"]}', end="" )
         print()
 

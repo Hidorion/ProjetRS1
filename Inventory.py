@@ -65,17 +65,17 @@ LootableItems = {
     
 Keys = {
     "3.1" : "Bronze Key",
-    "Usable" : True,
-    "Get" : False,
+    "3.1_Usable" : True,
+    "3.1_Get" : False,
     "3.2" : "Silver Key",
-    "Usable" : True,
-    "Get" : False,
+    "3.2_Usable" : True,
+    "3.2_Get" : False,
     "3.3" : "Golden Key",
-    "Usable" : True,
-    "Get" : False,
+    "3.3_Usable" : True,
+    "3.3_Get" : False,
     "3.4" : "USB Key",
-    "Usable" : True,
-    "Get" : False, 
+    "3.4_Usable" : True,
+    "3.4_Get" : False, 
     }
 
 IslandInventory = {
