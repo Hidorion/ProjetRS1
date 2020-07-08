@@ -4,7 +4,7 @@ if __name__ == "__main__":
 #ImportLocal
 import Readme
 import Variables
-import Doors
+import Clear
 import GettingPlayer
 import GettingMap
 #ImportModules
@@ -21,4 +21,6 @@ import GettingMap
 
 
 GettingMap.LoadMapFromFile("map.txt")
+GettingMap.DoorSpawn()
+Clear.ClearConsole()
 GettingMap.DrawMap()

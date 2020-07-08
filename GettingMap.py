@@ -1,3 +1,7 @@
+from os import replace
+import Variables
+import random
+
 
 def LoadMapFromFile(FileName):
     """
@@ -9,32 +13,37 @@ def LoadMapFromFile(FileName):
                 Columns = []
                 X = 0
                 for Character in Line:
-                    # ignore line ends
-                    if Character == "\n":
+                    if Character == "\n": # ignore line ends
                         continue
-                    # add character to map
-                    Columns.append(Character)
-                    # place character at map entry
-                    if Character == "E":
-                        CharacterPosition["X"] = X
-                        CharacterPosition["Y"] = Y
+                    Columns.append(Character) # add character to map
                     X += 1
-                # add line to map
-                MapMap.append(Columns)
+                Variables.MapMap.append(Columns) # add line to map
                 Y += 1
+
 def DrawMap():
     """
         Draw Map on console from 2 dimensional list
     """
-
-    # draw Map
-    for Y in range(len(MapMap)):
-        for X in range(len(MapMap[Y])):        
-            print(f'{MapElements[MapMap[Y][X]]["Image"]}', end="" )
+    for Y in range(len(Variables.MapMap)):
+        for X in range(len(Variables.MapMap[Y])):        
+            if (Y == Variables.PlayerPosition["Y"] and X == Variables.PlayerPosition["X"]):
+                print(Variables.PlayerIcon, end="")
+            else:# no character here, draw maze
+                print(f'{MapElements[Variables.MapMap[Y][X]]["Image"]}', end="" )
         print()
 
-def pointchanger (y,x,sample,map):
-    map[y][x] = sample
+def PointChanger (y,x,sample,carte):
+    carte[y][x] = sample
+    return carte
+    
+def DoorSpawn ():
+    """
+        On fait apparaitre les portes.
+    """
+    PointChanger(3,random.randint(31,39),"9",Variables.MapMap) #On ajoute la Porte pour le César Code
+    PointChanger(random.randint(15,20),8,"8",Variables.MapMap) #On ajoute la Porte pour le FizzBuzz
+    PointChanger(5,random.randint(72,76),"7",Variables.MapMap) #On ajoute la Porte pour le Sphinx
+
 
 MapElements = {
     " " : {
@@ -43,41 +52,47 @@ MapElements = {
         "CanWalk" : True},
     "*" : {
         "Name" : "Sand",
-        "Couleur" : "\u001b[33m",
         "Image" : "░",
         "CanWalk" : True},
     "T" : {
         "Name" : "Tree",
-        "Couleur" : "\u001b[0m",
         "Image" : "♣",
         "CanWalk" : True},
     "M" : {
         "Name" : "Montain",
-        "Couleur" : "\u001b[0m",
         "Image" : "▲",
         "CanWalk" : True},
     "S" : {
         "Name" : "Potable Water ",
-        "Couleur" : "\u001b[0m",
         "Image" : "~",
         "CanWalk" : False},
     "=" : {
         "Name" : "Bridge",
-        "Couleur" : "\u001b[0m",
         "Image" : "═",
         "CanWalk" : True},
     "~" : {
         "Name" : "Sea",
-        "Couleur" : "\u001b[0m",
         "Image" : "ʬ",
         "CanWalk" : False},
+    "9" : {
+        "Name" : "Door Cesar",
+        "Image" : "○",
+        "CanWalk" : True},
+    "8" : {
+        "Name" : "Door Fizz Buzz",
+        "Image" : "●",
+        "CanWalk" : True},
+    "7" : {
+        "Name" : "??????",
+        "Image" : "◌",
+        "CanWalk" : True},
     }
 
     # print(Variables.MapMap)
-CharacterPosition = {"X" : 0, "Y" : 0}
-MapMap = []
-CharacterPosition = {"X" : 0, "Y" : 0}
-#pointchanger(1,1,"☻",MapMap)
+
+
+
+
 #pointchangerpointchanger(2,random.randint(50,90),"○",MapMap) #Position César Code
 #pointchangerpointchanger(random.randint(10,16),92,"◌",MapMap) #Position Sphinx Nombre Mystérieux
 
