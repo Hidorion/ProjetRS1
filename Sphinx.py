@@ -61,7 +61,6 @@ def MagicNumber (): #Le jeu du numéro mystérieux
                     print(NotInt)
             else:
                 Guess = True
-                return Guess
         elif NbEssai >= 20 and Guess == False:    #Si on est nul, on peut retenter
             print("C'est perdu, il faut recommencer")   
             YorN = input("Voulez vous recommencer ? Y/N ")
@@ -71,7 +70,7 @@ def MagicNumber (): #Le jeu du numéro mystérieux
             else:
                 print("Très bien, au revoir !") #Mauvais joueur !
     print ("Bien joué")
-    
+    return True
         #les variables et des blablas, tout tient sur cette page pour éviter d'avoir 15 000 page.py"
 
 #les règles expliquées rapidement
