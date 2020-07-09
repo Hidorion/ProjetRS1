@@ -85,9 +85,9 @@ print(SphinxRules) #On affiche les règles
 Alors = MagicNumber() #On lance la partie !
 
 if Alors:
-    Inventory.Keys["3.1_Get"] = True
+    Inventory.Keys["3.1"][2] = True
 
 
 
-print(Inventory.Keys)
+print(Inventory.Keys["3.1"])
 
