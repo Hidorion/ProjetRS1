@@ -62,7 +62,7 @@ MapElements = {
         "Name" : "Tree",
         "Image" : "♣",
         "CanWalk" : True,
-        "Color Start" : "\u001b[32m",
+        "Color Start" : "\u001b[38;5;70m",
         "Color End" : "\u001b[0m"},
     "M" : {
         "Name" : "Mountain",
@@ -80,11 +80,11 @@ MapElements = {
         "Name" : "Bridge",
         "Image" : "═",
         "CanWalk" : True,
-        "Color Start" : "\u001b[0m",
+        "Color Start" : "\u001b[38;5;94m",
         "Color End" : "\u001b[0m"},
     "~" : {
         "Name" : "Sea",
-        "Image" : "ʬ",
+        "Image" : "≈",
         "CanWalk" : False,
         "Color Start" : "\u001b[34m",
         "Color End" : "\u001b[0m"},
@@ -102,7 +102,7 @@ MapElements = {
         "Color End" : "\u001b[0m"},
     "7" : {
         "Name" : "??????",
-        "Image" : "◌",
+        "Image" : "ᴥ",
         "CanWalk" : True,
         "Color Start" : "\u001b[31m",
         "Color End" : "\u001b[0m"},

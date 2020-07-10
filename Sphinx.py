@@ -74,7 +74,7 @@ def MagicNumber (): #Le jeu du numéro mystérieux
         #les variables et des blablas, tout tient sur cette page pour éviter d'avoir 15 000 page.py"
 
 #les règles expliquées rapidement
-SphinxRules = "J'ai choisi un nombre entre 1 et 100 (inclus).\nSi tu le trouves en moins de 20 coups, la Clé de Bronze est à Toi !"
+SphinxRules = "J'ai choisi un nombre entre 1 et 100 (inclus).\nSi tu le trouves en moins de 20 coups, la Clé de \u001b[38;5;136mBronze\u001b[0m est à Toi !"
 #Message explicite
 NotInt = "Vous devriez essayer avec des nombres entiers positifs"
 Sphinx = [] #Pour passer le sphinx en liste à 2D
