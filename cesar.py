@@ -35,11 +35,14 @@ while Game == "Lost":
     
     ClefCodage = str(input("Entrez une lettre, ou la réponse à l'énigme "))
     ClefCodage = ClefCodage.upper()
-    Clear.ClearConsole()
-    
-    if ClefCodage == PlayersName :
-        Game = "Won"
-    
+        
+    if len(ClefCodage) > 1:   
+        if ClefCodage == PlayersName :
+            Game = "Won"
+            break
+        else:
+            continue
+
     Codage = Alphabet.index(ClefCodage, 1)
     Codage = int(Codage)
     
@@ -67,7 +70,7 @@ while Game == "Lost":
     Credo = "".join(Credo) #On remet la liste en string
 
 #On print la porte avec le crédo modifié
-
+    Clear.ClearConsole()
     print(f"\n░░░░░░░░░░░░░░░░░░░░░░░\n▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒\n▒KZA-{ColourStart}{Credo}{ColourEnd}-NGF▒\n░LSO╔══════╤══════╗BBQ░\n▒OXC║      │░     ║PBA▒\n░ZAQ║      │░     ║DYT░\n▒VQE║      │░     ║RHR▒\n░GWS║      │░     ║FND░\n▒YEG║      │░     ║TUX▒\n░BDU║      │░     ║HJE░\n▒HCI║      │░     ║VIS▒\n░URW║      │░     ║JKW░\n▒PFK║      │░     ║XLI▒\n░MVY║      │░     ║LPJ░\n▒CTM║______│░_____║ZMN▒\n")
 
 print("You did it mutafukaz") #Bien joué
