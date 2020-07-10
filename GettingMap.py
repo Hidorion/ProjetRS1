@@ -8,17 +8,17 @@ def LoadMapFromFile(FileName):
         Loads a generic map from specified file name
     """
     with open(FileName, "r", encoding="utf-8") as MyFile:
-            Y = 0
+            # Y = 0
             for Line in MyFile:
                 Columns = []
-                X = 0
+                # X = 0
                 for Character in Line:
                     if Character == "\n": # ignore line ends
                         continue
                     Columns.append(Character) # add character to map
-                    X += 1
+                    # X += 1
                 Variables.MapMap.append(Columns) # add line to map
-                Y += 1
+                # Y += 1
 
 def DrawMap():
     """
@@ -29,7 +29,7 @@ def DrawMap():
             if (Y == Variables.PlayerPosition["Y"] and X == Variables.PlayerPosition["X"]):
                 print(Variables.PlayerIcon, end="")
             else:# no player here, draw maze
-                print(f'{MapElements[Variables.MapMap[Y][X]]["Image"]}', end="" )
+                print(f'{MapElements[Variables.MapMap[Y][X]]["Color Start"]}{MapElements[Variables.MapMap[Y][X]]["Image"]}{MapElements[Variables.MapMap[Y][X]]["Color End"]}', end="" )
         print()
 
 def PointChanger (y,x,sample,carte):
@@ -49,43 +49,63 @@ MapElements = {
     " " : {
         "Name" : "Ground",
         "Image" : " ",
-        "CanWalk" : True},
+        "CanWalk" : True,
+        "Color Start" : "",
+        "Color End" : ""},
     "*" : {
         "Name" : "Sand",
         "Image" : "░",
-        "CanWalk" : True},
+        "CanWalk" : True,
+        "Color Start" : "\u001b[33m",
+        "Color End" : "\u001b[0m"},
     "T" : {
         "Name" : "Tree",
         "Image" : "♣",
-        "CanWalk" : True},
+        "CanWalk" : True,
+        "Color Start" : "\u001b[32m",
+        "Color End" : "\u001b[0m"},
     "M" : {
-        "Name" : "Montain",
+        "Name" : "Mountain",
         "Image" : "▲",
-        "CanWalk" : True},
+        "CanWalk" : True,
+        "Color Start" : "\u001b[0m",
+        "Color End" : "\u001b[0m"},
     "S" : {
         "Name" : "Potable Water ",
         "Image" : "~",
-        "CanWalk" : False},
+        "CanWalk" : False,
+        "Color Start" : "\u001b[36m",
+        "Color End" : "\u001b[0m"},
     "=" : {
         "Name" : "Bridge",
         "Image" : "═",
-        "CanWalk" : True},
+        "CanWalk" : True,
+        "Color Start" : "\u001b[0m",
+        "Color End" : "\u001b[0m"},
     "~" : {
         "Name" : "Sea",
         "Image" : "ʬ",
-        "CanWalk" : False},
+        "CanWalk" : False,
+        "Color Start" : "\u001b[34m",
+        "Color End" : "\u001b[0m"},
     "9" : {
         "Name" : "Door Cesar",
         "Image" : "○",
-        "CanWalk" : True},
+        "CanWalk" : True,
+        "Color Start" : "\u001b[31m",
+        "Color End" : "\u001b[0m"},
     "8" : {
         "Name" : "Door Fizz Buzz",
         "Image" : "●",
-        "CanWalk" : True},
+        "CanWalk" : True,
+        "Color Start" : "\u001b[31m",
+        "Color End" : "\u001b[0m"},
     "7" : {
         "Name" : "??????",
         "Image" : "◌",
-        "CanWalk" : True},
+        "CanWalk" : True,
+        "Color Start" : "\u001b[31m",
+        "Color End" : "\u001b[0m"},
     }
 
     # print(Variables.MapMap)
