@@ -13,3 +13,21 @@
 \n▒PFK║      │░     ║XLI▒
 \n░MVY║      │░     ║LPJ░
 \n▒CTM║______│░_____║ZMN▒
+
+
+
+ 
+ 
+
+┌─────────────────────────────────────────────────┐\n
+│Bonjour explorateur !                            │\n
+│Trouve la clé qui rendrait le message clair.     │\n
+│Utilise là pour me dire comment on t'appelle.    │\n
+│Je rendrais à César ce qui appartient à César.   │\n
+│Et à toi, la clé d'Argent.                       │\n
+│Ecris une lettre et observe.                     │\n
+│Quand tu te sens prêt, entre le code.            │\n
+│Si tu écris plus d'une lettre,                   │\n
+│Je considère que tu tentes d'entre le code.      │\n
+│Bon courage ! Observe et la clé est à Toi !      │\n
+└─────────────────────────────────────────────────┘\n
