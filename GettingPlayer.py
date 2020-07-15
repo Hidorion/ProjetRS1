@@ -1,3 +1,5 @@
+import Variables
+
 def GettingPlayersName():    
     """
         On vient demander le prénom du joueur et on vérifie qu'il s'agit bien d'un prénom.
@@ -6,12 +8,13 @@ def GettingPlayersName():
     PlayerName = PlayerName.upper()
     while not GettingPlayersInfo(PlayerName):
         PlayerName = input("Attends, reprends ton souffle, je t'écoute... : ").strip() #On veut retirer de possibles espaces accidentels ou non.
-    
+    return PlayerName
+
 def GivingPlayerStatue():    
     """
         On fait part au joueur de sa condition.
     """
-    print(f"Hoo {PlayerName} est un jolie nom.\n")
+    print(f"Hoo {Variables.PlayerName} est un jolie nom.\n")
     print("Tu as eu de la chance, tu as pu être parfaitement reposé, nourri et hydraté avant de t'échouer ici\n")
     print("Tu as actuellement:\n")
     print(" - 100/100 de Santé.\n")
