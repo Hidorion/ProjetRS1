@@ -2,21 +2,23 @@ if __name__ == "__main__":
     pass
 
 #ImportLocal
-import Readme
+
 import Variables
 import Clear
 import GettingPlayer
 import GettingMap
+import Actions
 #ImportModules
 
 
-#Showing Rules
-#Readme.GettingRules()
 
+
+#Showing Rules
 #Getting Name
-#GettingPlayer.GettingPlayersName()
 #Giving infos
-#Readme.GettingInfo()
+#GettingPlayer.GivingPlayerStatue()
+
+
 
 
 
@@ -24,3 +26,5 @@ GettingMap.LoadMapFromFile("map.txt")
 GettingMap.DoorSpawn()
 Clear.ClearConsole()
 GettingMap.DrawMap()
+while Variables.GameInProgress:
+    Actions.GetCharacterAction()

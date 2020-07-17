@@ -17,12 +17,13 @@
            |▒│▒│▒│▓//   ▼   \\▓│▒│▒│▒|
            (▒│▒│▓│▓/         \▓│▓│▒│▒)
 ┌─────────────────────────────────────────────────┐
-│Bonjour explorateur !                            │
-│Pour ouvrir la porte de la montagne.             │
-│Et ainsi rejoindre tes compagnons.               │
-│Tu devras d’abord prouver ta valeur individuelle.│
-│Pour cela il te faut les 3 clés.                 │
-│Tu les obtiendras en relevant leurs défis.       │
+│Bien le bonjour et bienvenue !                   │
+│Je suis la porte du Sphinx.                      │
+│Pour ouvrir la porte de la montagne              │
+│et ainsi rejoindre tes compagnons,               │
+│tu devras d’abord prouver ta valeur individuelle.│
+│Pour cela il te faudra remporter 3 clés,         │
+│elles sont liés à 3 défies respectifs.           │
 │Ceci est le premier d’entre eux.                 │
 │Les 2 autres sont derrières 2 autres portes.     │
 └─────────────────────────────────────────────────┘

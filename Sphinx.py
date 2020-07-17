@@ -80,7 +80,7 @@ NotInt = "Vous devriez essayer avec des nombres entiers positifs"
 Sphinx = [] #Pour passer le sphinx en liste à 2D
 LoadMapFromFile("Sphinx.txt") #On va chercher le beau sphinx
 DrawMap() #on le dessine
-input("Pour continuer, appuyez sur ""Enter"" ") #On fait en sorte que le joueur puisse bien comprendre le système de clés
+input("Pour continuer, appuie sur ""Enter"" ") #On fait en sorte que le joueur puisse bien comprendre le système de clés
 print(SphinxRules) #On affiche les règles
 Alors = MagicNumber() #On lance la partie !
 
