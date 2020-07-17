@@ -40,9 +40,9 @@ def DoorSpawn ():
     """
         On fait apparaitre les portes.
     """
-    PointChanger(3,random.randint(31,39),"9",Variables.MapMap) #On ajoute la Porte pour le César Code
-    PointChanger(random.randint(15,20),8,"8",Variables.MapMap) #On ajoute la Porte pour le FizzBuzz
-    PointChanger(5,random.randint(72,76),"7",Variables.MapMap) #On ajoute la Porte pour le Sphinx
+    PointChanger(3,35,"9",Variables.MapMap) #On ajoute la Porte pour le César Code
+    PointChanger(20,8,"8",Variables.MapMap) #On ajoute la Porte pour le FizzBuzz
+    PointChanger(5,74,"7",Variables.MapMap) #On ajoute la Porte pour le Sphinx
 
 
 MapElements = {
@@ -66,21 +66,21 @@ MapElements = {
         "CanWalk" : True,
         "Color Start" : "\u001b[38;5;70m",
         "Color End" : "\u001b[0m",
-        "Message" : "Il est plus dur pour vous d'avancer dans la forêt"},
+        "Message" : ". Il est plus dur pour vous d'avancer dans la forêt"},
     "M" : {
         "Name" : "Mountain",
         "Image" : "▲",
         "CanWalk" : False,
         "Color Start" : "\u001b[0m",
         "Color End" : "\u001b[0m",
-        "Message" : "La montagne est trop abrute pour être grimpée"},
+        "Message" : ". La montagne est trop abrute pour être grimpée"},
     "S" : {
         "Name" : "Potable Water ",
         "Image" : "~",
         "CanWalk" : False,
         "Color Start" : "\u001b[36m",
         "Color End" : "\u001b[0m",
-        "Message" : "Tu peux remplir ta bouteille, mais pas vous y baigner. Le courant est trop fort"},
+        "Message" : ". Tu peux remplir ta bouteille, mais pas t'y baigner. Le courant est trop fort"},
     "=" : {
         "Name" : "Bridge",
         "Image" : "═",
@@ -94,28 +94,35 @@ MapElements = {
         "CanWalk" : False,
         "Color Start" : "\u001b[34m",
         "Color End" : "\u001b[0m",
-        "Message" : "La Mer est trop agitée pour s'y baigner"},
+        "Message" : ". La Mer est trop agitée pour s'y baigner"},
     "9" : {
         "Name" : "Door Cesar",
         "Image" : "○",
         "CanWalk" : True,
         "Color Start" : "\u001b[31m",
         "Color End" : "\u001b[0m",
-        "Message" : "Veux tu tenter d'obtenir la Clé d'Argent ?"},
+        "Message" : ". Veux tu tenter d'obtenir la Clé d'Argent ?"},
     "8" : {
         "Name" : "Door Fizz Buzz",
         "Image" : "●",
         "CanWalk" : True,
         "Color Start" : "\u001b[31m",
         "Color End" : "\u001b[0m",
-        "Message" : "Veux tu tenter d'obtenir la Clé Dorée ?"},
+        "Message" : ". Veux tu tenter d'obtenir la Clé Dorée ?"},
     "7" : {
         "Name" : "??????",
         "Image" : "ᴥ",
         "CanWalk" : True,
         "Color Start" : "\u001b[31m",
         "Color End" : "\u001b[0m",
-        "Message" : "Veux tu tenter d'obtenir la Clé de Bronze ?"},
+        "Message" : ". Veux tu tenter d'obtenir la Clé de Bronze ?"},
+    "6" : {
+        "Name" : "Grande Porte",
+        "Image" : "۩",
+        "CanWalk" : True,
+        "Color Start" : "\u001b[31m",
+        "Color End" : "\u001b[0m",
+        "Message" : ". Veux tu tenter d'ouvrir la Grande Porte ? "},
     }
 
     # print(Variables.MapMap)

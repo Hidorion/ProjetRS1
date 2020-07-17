@@ -15,8 +15,9 @@ import Actions
 
 #Showing Rules
 #Getting Name
+Variables.PlayerName = GettingPlayer.GettingPlayersName()
 #Giving infos
-#GettingPlayer.GivingPlayerStatue()
+GettingPlayer.GivingPlayerGlobalStatue()
 
 
 

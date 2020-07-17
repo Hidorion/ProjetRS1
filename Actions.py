@@ -1,26 +1,38 @@
 import Variables
 import GettingMap
 import Clear
+import GettingPlayer
+import Cesar
+import Inventory
+
+def ActiveDoors(Y,X):
+    if Y == 3 and X == 35:
+        input("Tu te retrouve face à une porte étrange, tu décides de t'approcher. ")
+        Cesar.CesarGame()
+    else:
+        pass
+
 def GetCharacterAction():
     """
         Ask for character action
     """
     
     # list of possible actions
-    PossibleActions = ["Z", "Q", "S", "D","R"]
+    PossibleActions = ["Z", "Q", "S", "D","R","I","HELP"]
 
     # wait for a valid action
     Action = ""
     while Action not in PossibleActions:
-        Action = input("Que doit faire le personnage ? ").upper()
+        Action = input("Que veux tu faire ? ").upper()
 
     # execute action
     Clear.ClearConsole()
     
-    ExecuteCharacterAction(Action)
     
-    GettingMap.DrawMap()
 
+    ExecuteCharacterAction(Action)
+    GettingMap.DrawMap()
+    GettingPlayer.GivingPlayersStats()
 
 def ExecuteCharacterAction(Action):
     """
@@ -46,6 +58,10 @@ def ExecuteCharacterAction(Action):
         Variables.GameMessage = f"\nLe personnage se déplace vers l'Est' {GettingMap.MapElements[Variables.MapMap[NewCharacterPositionY][NewCharacterPositionX]]['Message']}\n"
     elif Action == "R":
         Variables.GameMessage = "\nLe personnage se repose\n"
+    elif Action == "I":
+        Variables.GameMessage = f"\nVous regardez votre inventaire\n {Inventory.Keys} "
+    elif Action == "HELP":
+        Variables.GameMessage = "\nZ pour aller vers le Nord, S pour le Sud, D pour l'Est et Q pour l'Ouest\nR pour vous reposer et I pour consulter votre Inventaire"
     print(Variables.GameMessage)
         
 
@@ -60,3 +76,4 @@ def ExecuteCharacterAction(Action):
     # execute action
     Variables.PlayerPosition["X"] = NewCharacterPositionX
     Variables.PlayerPosition["Y"] = NewCharacterPositionY
+    ActiveDoors(Variables.PlayerPosition["Y"],Variables.PlayerPosition["X"])

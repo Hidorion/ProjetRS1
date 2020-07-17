@@ -3,7 +3,7 @@
 import Variables
 import Clear
 import random
-from Variables import PlayerName
+
 import Inventory
 
 def RandomCredo():
@@ -158,15 +158,13 @@ def CesarGame():
         ColourEnd = "\u001b[0m"
         print(f"\n░░░░░░░░░░░░░░░░░░░░░░░\n▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒\n▒KZA-{ColourStart}{Credo}{ColourEnd}-NGF▒\n░LSO╔══════╤══════╗BBQ░\n▒OXC║      │░     ║PBA▒\n░ZAQ║      │░     ║DYT░\n▒VQE║      │░     ║RHR▒\n░GWS║      │░     ║FND░\n▒YEG║      │░     ║TUX▒\n░BDU║      │░     ║HJE░\n▒HCI║      │░     ║VIS▒\n░URW║      │░     ║JKW░\n▒PFK║      │░     ║XLI▒\n░MVY║      │░     ║LPJ░\n▒CTM║______│░_____║ZMN▒\n")
 
-    print("You did it mutafukaz") #Bien joué
+    print("La porte s'ouvre et devant, sur une pierre taillée, une clé argentée y est posée. Tu la récupères.\n") #Bien joué
     Inventory.Keys["3.2"][2] = True
 #Base#Trouve la clé qui rendrait le message clair. Utilise là pour me dire comment on t'appelle. \nAinsi, je rendrais à César ce qui appartient à César. Et à toi, la clé d'Argent.
 Alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 
 
 
-
-CesarGame()
 
 
 

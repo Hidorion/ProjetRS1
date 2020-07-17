@@ -12,8 +12,8 @@ def GettingPlayersName():
     return PlayerName
 
 def GettingRules ():    
-    WelcomeText = f"Bienvenue {PlayerName} sur cette île mystérieuse.\nTu es ici avec un seul et unique but. Réussir à franchir la Grande Porte ! (۩)\nPour cela tu devras réussir à obtenir et assembler 3 clés. Tu les obtiendras en réussisant les 3 challenges de l'île.\nIls sont derrière une porte éparpillé sur l'île.\nJe te suggère tout de même de visiter la Grande Porte située juste à côté avant de te lancer à la poursuite des clés."
-    SurvivalText = "Tu devras faire face à une île pas si paradisiaque.\nEn effet, tu risques de te fatiguer et d'avoir faim tout au long de ton parcours\nSans compter sur cette chaleur, tu devras penser à boire et t'hydrater.\nPour faire court, la mort te guette.\nSi ta Soif, ta Faim ou ta Santé tombe à 0, tu mourras et devras tout recommencer.\n"
+    WelcomeText = f"Bienvenue {Variables.PlayerName} sur cette île mystérieuse.\nTu es ici avec un seul et unique but. Réussir à franchir la Grande Porte ! (۩)\nPour cela tu devras réussir à obtenir et assembler 3 clés. Tu les obtiendras en réussisant les 3 challenges de l'île.\nIls sont derrière 3 portes éparpillées sur l'île.\n"
+    SurvivalText = "Tu te trouves sur une île pas si paradisiaque.\nAvec les conditions climatiques de l'île, tu risques de te fatiguer et d'avoir faim tout au long de ton parcours\nSans compter sur cette chaleur, tu devras penser à boire et t'hydrater.\nPour faire court, la mort te guette.\nSi ta Soif, ta Faim ou ta Santé tombe à 0, tu mourras et devras tout recommencer.\n"
     print(WelcomeText)
     print()
     print(SurvivalText)
@@ -26,7 +26,7 @@ def GettingInfo ():
     print(CheckYou)
     print(CheckObjects)
 
-def GivingPlayerStatue():    
+def GivingPlayerGlobalStatue():    
     """
         On fait part au joueur de sa condition.
     """
@@ -38,7 +38,7 @@ def GivingPlayerStatue():
     print(" - 100/100 de Santé.\n")
     print(" - 100/100 de Faim.\n")
     print(" - 100/100 de Soif.\n")
-    passer = input("Une fois que tu as bien tout compris, appuies sur Entré")
+    passer = input("Une fois que tu as bien tout compris, appuies sur Entrée ")
 
 def GettingPlayersInfo (Name):
     """
@@ -53,3 +53,7 @@ def GettingPlayersInfo (Name):
             return False
     return True
 
+def GivingPlayersStats():
+    print(f"Vous êtes à : {Variables.Santé}/{Variables.MaxStats} de Santé")
+    print(f"Vous êtes à : {Variables.Faim}/{Variables.MaxStats} de Satieté")
+    print(f"Vous êtes à : {Variables.Soif}/{Variables.MaxStats} d'Hydratation\n")
