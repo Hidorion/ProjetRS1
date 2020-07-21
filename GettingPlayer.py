@@ -38,6 +38,7 @@ def GivingPlayerGlobalStatue():
     print(" - 100/100 de Santé.\n")
     print(" - 100/100 de Faim.\n")
     print(" - 100/100 de Soif.\n")
+    print("Pour te déplacer :\nZ pour aller vers le Nord, S pour le Sud, D pour l'Est et Q pour l'Ouest. Si tu as besoin d'autres informations écrits : Help\n")
     passer = input("Une fois que tu as bien tout compris, appuies sur Entrée ")
 
 def GettingPlayersInfo (Name):

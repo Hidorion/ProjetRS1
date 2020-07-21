@@ -75,3 +75,6 @@ IslandInventory = {
     "LootableItems" : LootableItems,
     "Keys" : Keys
 }
+
+if Keys["3.1"][2] and Keys["3.2"][2] and Keys["3.3"][2]:
+    Keys["3.4"][2] = True

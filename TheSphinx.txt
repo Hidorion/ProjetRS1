@@ -18,12 +18,12 @@
            (▒│▒│▓│▓/         \▓│▓│▒│▒)
 ┌─────────────────────────────────────────────────┐
 │Bien le bonjour et bienvenue !                   │
-│Je suis la porte du Sphinx.                      │
-│Pour ouvrir la porte de la montagne              │
-│et ainsi rejoindre tes compagnons,               │
-│tu devras d’abord prouver ta valeur individuelle.│
-│Pour cela il te faudra remporter 3 clés,         │
-│elles sont liés à 3 défies respectifs.           │
-│Ceci est le premier d’entre eux.                 │
-│Les 2 autres sont derrières 2 autres portes.     │
+│Je suis le Sphinx gardien de la clé de Bronze.   │
+│Pour l'obtenir il te faudra chercher.            │
+│Ce sera entre 1 et 100. Mais pas de panique !    │
+│Je suis bienveillant et je t'aiderais.           │
+│Tu auras le droit à 20 tentatives et au délà...  │
+│Il faudra recommencer !                          │
+│Trouve ce nombre et la clé sera à toi.           │
+│Je te souhaite bonne chance !                    │
 └─────────────────────────────────────────────────┘

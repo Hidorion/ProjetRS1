@@ -1,9 +1,16 @@
 import random
 import Inventory
+import Variables
+
 ##############################On imprime le beau sphinx####################################
-def LoadMapFromFile(FileName):
+def SphinxPrep(Filename):   
+    LoadSphinx(Filename)
+    print()
+    DrawSphinx()
+    
+def LoadSphinx(FileName):
     """
-        Loads a generic map from specified file name
+        Loads the beautiful Sphinx
     """
     with open(FileName, "r", encoding="utf-8") as MyFile:
             Y = 0
@@ -15,21 +22,27 @@ def LoadMapFromFile(FileName):
                         continue
                     Columns.append(Character) # add character to map
                     X += 1
-                Sphinx.append(Columns) # add line to map
+                Variables.Sphinx.append(Columns) # add line to map
                 Y += 1
 
-def DrawMap():
+def DrawSphinx():
     """
-        Draw Map on console from 2 dimensional list
+        Draw the beautiful Sphinx
     """
-    for Y in range(len(Sphinx)):
-        for X in range(len(Sphinx[Y])):        
-            print(f'{Sphinx[Y][X]}', end="" )
+    for Y in range(len(Variables.Sphinx)):
+        for X in range(len(Variables.Sphinx[Y])):        
+            print(f'{Variables.Sphinx[Y][X]}', end="" )
         print()
+    
+    MagicNumber()
+    
 #######################################################################################
 
 
-def MagicNumber (): #Le jeu du numéro mystérieux
+def MagicNumber(): #Le jeu du numéro mystérieux
+    input("Pour continuer, appuie sur ""Entrée"" ")
+    SphinxRules = "J'ai choisi un nombre entre 1 et 100 (inclus).\nSi tu le trouves en moins de 20 coups, tu remportes la Clé de \u001b[38;5;136mBronze\u001b[0m !"
+    NotInt = "Vous devriez essayer avec des nombres entiers positifs"
     ToGuess = random.randint(1,100) #Le "sphinx" choisit un nombre
     NbEssai = 1  #Pour savoir ou on en est
     Guess = False
@@ -69,25 +82,18 @@ def MagicNumber (): #Le jeu du numéro mystérieux
                 MagicNumber()
             else:
                 print("Très bien, au revoir !") #Mauvais joueur !
-    print ("Bien joué")
-    return True
+    print ("Félicitations ! La Clé de \u001b[38;5;136mBronze\u001b[0m est à Toi !")
+    Inventory.Keys["3.1"][2] = True
         #les variables et des blablas, tout tient sur cette page pour éviter d'avoir 15 000 page.py"
 
 #les règles expliquées rapidement
-SphinxRules = "J'ai choisi un nombre entre 1 et 100 (inclus).\nSi tu le trouves en moins de 20 coups, la Clé de \u001b[38;5;136mBronze\u001b[0m est à Toi !"
+
 #Message explicite
-NotInt = "Vous devriez essayer avec des nombres entiers positifs"
-Sphinx = [] #Pour passer le sphinx en liste à 2D
-LoadMapFromFile("Sphinx.txt") #On va chercher le beau sphinx
-DrawMap() #on le dessine
-input("Pour continuer, appuie sur ""Enter"" ") #On fait en sorte que le joueur puisse bien comprendre le système de clés
-print(SphinxRules) #On affiche les règles
-Alors = MagicNumber() #On lance la partie !
 
-if Alors:
-    Inventory.Keys["3.1"][2] = True
+#Sphinx = [] #Pour passer le sphinx en liste à 2D
+#SphinxPrep("Sphinx.txt") #On va chercher le beau sphinx
 
+#input("Pour continuer, appuie sur ""Entrée"" ") #On fait en sorte que le joueur puisse bien comprendre le système de clés
+#print(SphinxRules) #On affiche les règles
 
-
-print(Inventory.Keys["3.1"])
 

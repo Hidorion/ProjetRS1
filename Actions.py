@@ -4,11 +4,22 @@ import Clear
 import GettingPlayer
 import Cesar
 import Inventory
+import Fizzbuzz
+import Sphinx
 
 def ActiveDoors(Y,X):
+    """
+        Permet d'activer les portes quand on arrive dessus.
+    """
     if Y == 3 and X == 35:
         input("Tu te retrouve face à une porte étrange, tu décides de t'approcher. ")
         Cesar.CesarGame()
+    elif Y == 20 and X == 8:
+        input(Variables.FizzbuzzMessage)
+        Fizzbuzz.FizzBuzzGame(Fizzbuzz.ListOfPlayers)
+    elif Y == 5 and X == 74:
+        input("Sphinx ")
+        Sphinx.SphinxPrep("TheSphinx.txt")
     else:
         pass
 

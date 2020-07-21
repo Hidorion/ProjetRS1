@@ -1,6 +1,5 @@
-from os import replace
 import Variables
-import random
+
 
 
 def LoadMapFromFile(FileName):
