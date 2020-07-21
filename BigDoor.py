@@ -1,11 +1,12 @@
-########## MODULES ##########
+##### MODULES #####
 import tkinter as tk
 from PIL import ImageTk, Image
 
-########## DATA ##########
+##### DATA #####
 import Variables
+import Inventory
 
-########## Fonction pour afficher l'image ##########
+##### Function to show the picture #####
 def show_imge(path):
     """
         On affiche une belle photo d'une belle porte. C'est vraiment pour faire beau.
@@ -16,14 +17,15 @@ def show_imge(path):
     panel.pack(side="bottom", fill="both", expand="yes")
     image_window.mainloop()
 
-########## Fonction de la Grande Porte ##########
+##### Function to print the Big Door #####
 def BigDoorPrep(Filename):   
     show_imge("door.jpg")
     LoadBigDoor(Filename)
     print()
     DrawBigDoor()
     
-def LoadBigDoor(FileName): ########## On charge le texte associé à la porte
+##### Loading the data #####
+def LoadBigDoor(FileName): 
     """
         Loads the beautiful BigDoor
     """
@@ -39,7 +41,9 @@ def LoadBigDoor(FileName): ########## On charge le texte associé à la porte
                     X += 1
                 Variables.BigDoor.append(Columns) # add line to map
                 Y += 1
-def DrawBigDoor(): ########## On le dessine
+
+##### Printing #####
+def DrawBigDoor(): 
     """
         Draw the beautiful BigDoor
     """
@@ -49,5 +53,8 @@ def DrawBigDoor(): ########## On le dessine
         print()
     input()
     print(Variables.Credits)
-
-#BigDoorPrep("TheBigDoor.txt")
+if Inventory.Keys["3.1"][2] and Inventory.Keys["3.2"][2] and Inventory.Keys["3.3"][2]:
+    Inventory.Keys["3.4"][2] = True
+    BigDoorPrep("TheBigDoor.txt")
+else :
+    pass

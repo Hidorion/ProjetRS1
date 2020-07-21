@@ -39,9 +39,9 @@ def DoorSpawn ():
     """
         On fait apparaitre les portes.
     """
-    PointChanger(3,35,"9",Variables.MapMap) #On ajoute la Porte pour le César Code
-    PointChanger(20,8,"8",Variables.MapMap) #On ajoute la Porte pour le FizzBuzz
-    PointChanger(5,74,"7",Variables.MapMap) #On ajoute la Porte pour le Sphinx
+    PointChanger(3,35,"9",Variables.MapMap) #We add the door for the César Code
+    PointChanger(20,8,"8",Variables.MapMap) #We add the door for the FizzBuzz
+    PointChanger(5,74,"7",Variables.MapMap) #We add the door for the Sphinx
 
 
 MapElements = {
@@ -124,26 +124,11 @@ MapElements = {
         "Message" : ". Veux tu tenter d'ouvrir la Grande Porte ? "},
     }
 
-    # print(Variables.MapMap)
 
-
-
-
-#pointchangerpointchanger(2,random.randint(50,90),"○",MapMap) #Position César Code
-#pointchangerpointchanger(random.randint(10,16),92,"◌",MapMap) #Position Sphinx Nombre Mystérieux
-
+# Legend for the player for he can get what the map means
+MapsLegend = "\nEau potable = ~\nLa mer = ≈\nMontagne = ▲\nSable = ░\nPlaine = " "\nPorte 1 = ○\nPorte 2 = ᴥ\nPorte 3 = ●\nGrande Porte = ۩\nArbre = ♣\nPont = ═"
 """ 
-Eau potable = ~
-Eau de mer = ʬ
-Montagne = M
-Sable = ░
-Plaine = " "
-Porte 1 César = ○
-Porte 2 ????  = ◌
-Porte 3 FB-ZZ = ●
 Objet consommable = ©
 Objet récupérable = ʘ
-Grande Porte = ۩
-Arbre = ♣
-Pont = ═
+
 """

@@ -6,6 +6,7 @@ import Cesar
 import Inventory
 import Fizzbuzz
 import Sphinx
+from Variables import Santé
 
 def ActiveDoors(Y,X):
     """
@@ -18,18 +19,23 @@ def ActiveDoors(Y,X):
         input(Variables.FizzbuzzMessage)
         Fizzbuzz.FizzBuzzGame(Fizzbuzz.ListOfPlayers)
     elif Y == 5 and X == 74:
-        input("Sphinx ")
+        input("Un Sphinx se dresse devant la fôret. Il te demande de t'avancer devant lui'. ")
         Sphinx.SphinxPrep("TheSphinx.txt")
     else:
         pass
+
+def Movement():
+    Variables.Santé=Variables.Santé + Variables.BasicMove[0]
+    Variables.Faim=Variables.Faim + Variables.BasicMove[1]
+    Variables.Soif=Variables.Soif + Variables.BasicMove[2]
 
 def GetCharacterAction():
     """
         Ask for character action
     """
-    
+
     # list of possible actions
-    PossibleActions = ["Z", "Q", "S", "D","R","I","HELP"]
+    PossibleActions = ["Z", "Q", "S", "D","R","I","HELP","MAP"]
 
     # wait for a valid action
     Action = ""
@@ -58,6 +64,7 @@ def ExecuteCharacterAction(Action):
     if Action == "Z":
         NewCharacterPositionY -= 1
         Variables.GameMessage = f"\nLe personnage se déplace vers le Nord {GettingMap.MapElements[Variables.MapMap[NewCharacterPositionY][NewCharacterPositionX]]['Message']}\n"
+        Movement()
     elif Action == "S":
         NewCharacterPositionY += 1
         Variables.GameMessage = f"\nLe personnage se déplace vers le Sud {GettingMap.MapElements[Variables.MapMap[NewCharacterPositionY][NewCharacterPositionX]]['Message']}\n"
@@ -70,9 +77,12 @@ def ExecuteCharacterAction(Action):
     elif Action == "R":
         Variables.GameMessage = "\nLe personnage se repose\n"
     elif Action == "I":
-        Variables.GameMessage = f"\nVous regardez votre inventaire\n {Inventory.Keys} "
+        Variables.GameMessage = f"\nVous regardez votre inventaire\n {Inventory.Keys} \n {input()} \n"
+    elif Action == "MAP":
+        Variables.GameMessage = f"\nVous regardez votre carte et sa légende\n {GettingMap.MapsLegend} \n"
+        input("\n")
     elif Action == "HELP":
-        Variables.GameMessage = "\nZ pour aller vers le Nord, S pour le Sud, D pour l'Est et Q pour l'Ouest\nR pour vous reposer et I pour consulter votre Inventaire"
+        Variables.GameMessage = f"\nZ pour aller vers le Nord, S pour le Sud, D pour l'Est et Q pour l'Ouest\nR pour vous reposer, I pour consulter votre Inventaire, MAP pour ouvrir la légende de la carte\n {input()} \n"
     print(Variables.GameMessage)
         
 

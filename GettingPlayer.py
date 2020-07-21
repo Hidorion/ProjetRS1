@@ -8,7 +8,7 @@ def GettingPlayersName():
     PlayerName = input("Mais tout d'abord, quel est ton nom ? ")
     PlayerName = PlayerName.upper()
     while not GettingPlayersInfo(PlayerName):
-        PlayerName = input("Attends, reprends ton souffle, je t'écoute... : ").strip() #On veut retirer de possibles espaces accidentels ou non.
+        PlayerName = input("Attends, reprends ton souffle, je t'écoute... : ").strip() #We want to delete extra blanks
     return PlayerName
 
 def GettingRules ():    
@@ -35,9 +35,9 @@ def GivingPlayerGlobalStatue():
     GettingInfo ()
     print("Tu as eu de la chance, tu as pu être parfaitement reposé, nourri et hydraté avant de t'échouer ici\n")
     print("Tu as actuellement:\n")
-    print(" - 100/100 de Santé.\n")
-    print(" - 100/100 de Faim.\n")
-    print(" - 100/100 de Soif.\n")
+    print(" - 100/100 d'énergie'.\n")
+    print(" - 100/100 de satiété.\n")
+    print(" - 100/100 d'hydratation'.\n")
     print("Pour te déplacer :\nZ pour aller vers le Nord, S pour le Sud, D pour l'Est et Q pour l'Ouest. Si tu as besoin d'autres informations écrits : Help\n")
     passer = input("Une fois que tu as bien tout compris, appuies sur Entrée ")
 
@@ -48,13 +48,13 @@ def GettingPlayersInfo (Name):
     if Name == "":
         return False
     for Character in Name:
-        if (not Character.isalpha() #On ne veut que des lettres.
-            and Character != "-"    #On accepte les tirets.
-            and Character != " "):  #Ainsi que les espaces, Prénom et Nom par exemple.
+        if (not Character.isalpha() #We only want letters
+            and Character != "-"    #Ok we can accept the -
+            and Character != " "):  #Why not space if you want to put your full name.
             return False
     return True
 
 def GivingPlayersStats():
-    print(f"Vous êtes à : {Variables.Santé}/{Variables.MaxStats} de Santé")
-    print(f"Vous êtes à : {Variables.Faim}/{Variables.MaxStats} de Satieté")
-    print(f"Vous êtes à : {Variables.Soif}/{Variables.MaxStats} d'Hydratation\n")
+    print(f"Vous êtes à : {Variables.Santé}/{Variables.MaxStats} d'énergie'")
+    print(f"Vous êtes à : {Variables.Faim}/{Variables.MaxStats} de satieté")
+    print(f"Vous êtes à : {Variables.Soif}/{Variables.MaxStats} d'hydratation\n")

@@ -41,7 +41,6 @@ def Joueur (message,Pos,TheListOfPlayers):
             
 
 def FizzBuzzGame(TheListOfPlayers):
-    print("Fonctione appelée \n")
     """
         C'est la fonction pour commencer le jeu
     """
@@ -50,41 +49,40 @@ def FizzBuzzGame(TheListOfPlayers):
     PosInList = 0
     Turn = 1
     while Variables.PlayerName in TheListOfPlayers:
-        print("Fonctione en marche \n")
         time.sleep(1)
 
         if PosInList > len(TheListOfPlayers)-1:
             PosInList = 0
         
-        if Turn %3 == 0 and Turn %5 == 0 : #Si c'est un multipe de 3 et 5
+        if Turn %3 == 0 and Turn %5 == 0 : #If we can divide by 3 and 5
             
             Singe("Fizz Buzz",PosInList,TheListOfPlayers)
             Gorille("Fizz Buzz",PosInList,TheListOfPlayers)
             Joueur("Fizz Buzz",PosInList,TheListOfPlayers)    
         
-        elif Turn %3 == 0: #Si c'est un multipe de 3
+        elif Turn %3 == 0: #If we can divide by 3
             
             Singe("Fizz",PosInList,TheListOfPlayers)
             Gorille("Fizz",PosInList,TheListOfPlayers)
             Joueur("Fizz",PosInList,TheListOfPlayers)    
         
-        elif Turn %5 == 0: #Si c'est un multipe de 5
+        elif Turn %5 == 0: #If we can divide by 5
             
             Singe("Buzz",PosInList,TheListOfPlayers)
             Gorille("Buzz",PosInList,TheListOfPlayers)
             Joueur("Buzz",PosInList,TheListOfPlayers)    
         
-        else: #Si ce n'est pas un multipe de 3 ou de 5
+        else: #Other but not by 3 or 5
             
             Singe(Turn,PosInList,TheListOfPlayers)
             Gorille(Turn,PosInList,TheListOfPlayers)
             Joueur(Turn,PosInList,TheListOfPlayers)    
         
-        PosInList = PosInList + 1 #On passe au joueur suivant
+        PosInList = PosInList + 1 #Next player please
         
-        Turn = Turn + 1 #On continue de compter
+        Turn = Turn + 1 #keep counting
 
-        if len(TheListOfPlayers) == 1 and TheListOfPlayers[0] == Variables.PlayerName: #Si il ne reste qu'une personne et que c'est le joueur :
+        if len(TheListOfPlayers) == 1 and TheListOfPlayers[0] == Variables.PlayerName: #If the last player is the Player
             print("C'est gagné")
             Stats = "Won"
             break  
@@ -92,20 +90,20 @@ def FizzBuzzGame(TheListOfPlayers):
         Stats = "Lost"
     
     if Stats == "Won":
-        print("Félicitations, vous obtenez la clé en Or !")  #La clé en or en poche
+        print("Félicitations, vous obtenez la clé en \u001b[38;5;220mOr\u001b[0m !")  #Golden key in your pocket !
         Inventory.Keys["3.3"][2] = True
     
-    if Stats == "Lost" :    #Si c'est perdu
-        replay = input("Tu as perdu, veux tu rejouer ? Oui ou non ? ").upper()   #On retente ?
+    if Stats == "Lost" :    #If Player lost the game
+        replay = input("Tu as perdu, veux tu rejouer ? Oui ou non ? ").upper()   #Try again ?
         if replay == "OUI":
-            print("C'est reparti, tout le monde reprend sa place") #Ca repart
+            print("C'est reparti, tout le monde reprend sa place") #Shit, here we go again
             ListOfPlayersReplay = []
-            del ListOfPlayersReplay[:]   #On réinitialise la liste
+            del ListOfPlayersReplay[:]   #We refresh the list
             ListOfPlayersReplay = ["Singe Agile", "Singe Marrant", "Singe Sage", "Singe Grand", "Singe Mince", "Chef Gorille", "Singe Farceur", "Singe énieur", "Singe Comunimaj", "Garo Gorille"]
             FizzBuzzGame(ListOfPlayersReplay)
     print()
 
 ListOfPlayers = ["Singe Agile", "Singe Marrant", "Singe Sage", "Singe Grand", "Singe Mince", "Chef Gorille", "Singe Farceur", "Singe énieur", "Singe Comunimaj", "Garo Gorille"]
 
-#FizzBuzzGame(ListOfPlayers)
+
 
