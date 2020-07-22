@@ -1,4 +1,4 @@
-##### Players's stats #####
+##### PLAYER'S STATS #####
 Santé = 100
 Faim = 100
 Soif = 100
@@ -6,6 +6,8 @@ MaxStats = 100
 PlayerName = ""
 PlayerPosition = {"Y" : 25, "X" : 74} #25/74
 PlayerIcon = "☻"
+
+##### STATS' ALTERATION #####
 Resting = [6,1,-2]
 BasicMove = [-3,-2,-2]
 ForestMove = [-4,-2,-2]
@@ -21,6 +23,7 @@ Credits = f"\nMerci {PlayerName} d'avoir jouer au Projet RS 1 !\nMerci égalemen
 GameMessage = ""
 
 
-##### Other #####
+##### OTHER #####
 GameInProgress = True
+GameProgression = 0
 

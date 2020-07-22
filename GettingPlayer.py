@@ -1,3 +1,4 @@
+from tkinter import Variable
 import Variables
 
 
@@ -35,7 +36,7 @@ def GivingPlayerGlobalStatue():
     GettingInfo ()
     print("Tu as eu de la chance, tu as pu être parfaitement reposé, nourri et hydraté avant de t'échouer ici\n")
     print("Tu as actuellement:\n")
-    print(" - 100/100 d'énergie'.\n")
+    print(" - 100/100 d'énergie.\n")
     print(" - 100/100 de satiété.\n")
     print(" - 100/100 d'hydratation'.\n")
     print("Pour te déplacer :\nZ pour aller vers le Nord, S pour le Sud, D pour l'Est et Q pour l'Ouest. Si tu as besoin d'autres informations écrits : Help\n")
@@ -55,6 +56,17 @@ def GettingPlayersInfo (Name):
     return True
 
 def GivingPlayersStats():
-    print(f"Vous êtes à : {Variables.Santé}/{Variables.MaxStats} d'énergie'")
+    
+    if Variables.Santé > Variables.MaxStats:
+        Variables.Santé = Variables.MaxStats
+    
+    if Variables.Faim > Variables.MaxStats:
+        Variables.Faim = Variables.MaxStats
+    
+    if Variables.Soif > Variables.MaxStats:
+        Variables.Soif = Variables.MaxStats
+    
+    print(f"\nVous êtes à : {Variables.Santé}/{Variables.MaxStats} d'énergie")
     print(f"Vous êtes à : {Variables.Faim}/{Variables.MaxStats} de satieté")
     print(f"Vous êtes à : {Variables.Soif}/{Variables.MaxStats} d'hydratation\n")
+    print(f"Tu es sur l'île depuis {Variables.GameProgression} heures\n")

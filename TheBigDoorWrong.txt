@@ -1,0 +1,9 @@
+
+┌──────────────────────────────────────────────────────┐
+│Tu arrives donc devant cette sublime porte.           │
+│Elle est incrustée dans un gigantesque arbre.         │
+│Un lampion allumé, semble être éléctrique.            │
+│Il y a 3 serrures ornées de bronze d'argent et d'or.  │
+│Tu n'as malheureusement pas toutes les clés...        │
+│Tu dois continuer de chercher.                        │
+└──────────────────────────────────────────────────────┘

@@ -43,6 +43,7 @@ def DrawSphinx():
 ##### Mysterious Number's Game #####
 def MagicNumber(): 
     input("Pour continuer, appuie sur ""Entrée"" ")
+    Variables.GameProgression += 1
     SphinxRules = "J'ai choisi un nombre entre 1 et 100 (inclus).\nSi tu le trouves en moins de 20 coups, tu remportes la Clé de \u001b[38;5;136mBronze\u001b[0m !"
     NotInt = "Vous devriez essayer avec des nombres entiers positifs"
     ToGuess = random.randint(1,100) #The "sphinx" picks a number

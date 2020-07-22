@@ -6,7 +6,9 @@ import Cesar
 import Inventory
 import Fizzbuzz
 import Sphinx
-from Variables import Santé
+import BigDoor
+from Variables import GameProgression
+
 
 def ActiveDoors(Y,X):
     """
@@ -21,13 +23,27 @@ def ActiveDoors(Y,X):
     elif Y == 5 and X == 74:
         input("Un Sphinx se dresse devant la fôret. Il te demande de t'avancer devant lui'. ")
         Sphinx.SphinxPrep("TheSphinx.txt")
+    elif Y == 2 and X == 20:
+        input("Une lueur semble emergée derrière les arbres, tu décides d'y jeter un oeil. ")
+        BigDoor.CheckKeys()
     else:
         pass
 
 def Movement():
+    """
+        Impact the players while moving on the map
+    """
     Variables.Santé=Variables.Santé + Variables.BasicMove[0]
     Variables.Faim=Variables.Faim + Variables.BasicMove[1]
     Variables.Soif=Variables.Soif + Variables.BasicMove[2]
+
+def Resting():
+    """
+
+    """
+    Variables.Santé=Variables.Santé + Variables.Resting[0]
+    Variables.Faim=Variables.Faim + Variables.Resting[1]
+    Variables.Soif=Variables.Soif + Variables.Resting[2]
 
 def GetCharacterAction():
     """
@@ -43,11 +59,8 @@ def GetCharacterAction():
         Action = input("Que veux tu faire ? ").upper()
 
     # execute action
-    Clear.ClearConsole()
-    
-    
-
     ExecuteCharacterAction(Action)
+    Clear.ClearConsole()
     GettingMap.DrawMap()
     GettingPlayer.GivingPlayersStats()
 
@@ -65,17 +78,26 @@ def ExecuteCharacterAction(Action):
         NewCharacterPositionY -= 1
         Variables.GameMessage = f"\nLe personnage se déplace vers le Nord {GettingMap.MapElements[Variables.MapMap[NewCharacterPositionY][NewCharacterPositionX]]['Message']}\n"
         Movement()
+        Variables.GameProgression += 1
     elif Action == "S":
         NewCharacterPositionY += 1
         Variables.GameMessage = f"\nLe personnage se déplace vers le Sud {GettingMap.MapElements[Variables.MapMap[NewCharacterPositionY][NewCharacterPositionX]]['Message']}\n"
+        Movement()
+        Variables.GameProgression += 1
     elif Action == "Q":
         NewCharacterPositionX -= 1
         Variables.GameMessage = f"\nLe personnage se déplace vers l'Ouest {GettingMap.MapElements[Variables.MapMap[NewCharacterPositionY][NewCharacterPositionX]]['Message']}\n"
+        Movement()
+        Variables.GameProgression += 1
     elif Action == "D":
         NewCharacterPositionX += 1
         Variables.GameMessage = f"\nLe personnage se déplace vers l'Est' {GettingMap.MapElements[Variables.MapMap[NewCharacterPositionY][NewCharacterPositionX]]['Message']}\n"
+        Movement()
+        Variables.GameProgression += 1
     elif Action == "R":
-        Variables.GameMessage = "\nLe personnage se repose\n"
+        Variables.GameMessage = "\nTu te reposes pendant une heure\n"
+        Resting()
+        Variables.GameProgression += 1
     elif Action == "I":
         Variables.GameMessage = f"\nVous regardez votre inventaire\n {Inventory.Keys} \n {input()} \n"
     elif Action == "MAP":

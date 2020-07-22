@@ -100,6 +100,7 @@ def CesarGame():
     """
         Cette fonction permet d'afficher le jeu.
     """
+    Variables.GameProgression += 1
     Credo = RandomCredo()
     Credo = list(Credo)  #We change in to a list
     LastKey = Alphabet.index(Alphabet[random.randint(0,24)]) # We don't want the player to enter the solution directly

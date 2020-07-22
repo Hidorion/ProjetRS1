@@ -48,6 +48,7 @@ def FizzBuzzGame(TheListOfPlayers):
     Stats = "Ongoing"
     PosInList = 0
     Turn = 1
+    Variables.GameProgression += 1
     while Variables.PlayerName in TheListOfPlayers:
         time.sleep(1)
 
