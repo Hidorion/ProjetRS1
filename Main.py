@@ -1,27 +1,23 @@
 if __name__ == "__main__":
     pass
 
-#ImportLocal
+##### IMPORT LOCAL #####
 
 import Variables
 import Clear
 import GettingPlayer
 import GettingMap
 import Actions
-#ImportModules
+
+##### IMPORT MODULE #####
 
 
+##### INITIALIZING #####
 
-
-#Showing Rules
-#Getting Name
 Variables.PlayerName = GettingPlayer.GettingPlayersName()
-#Giving infos
 GettingPlayer.GivingPlayerGlobalStatue()
 
-
-
-
+##### MAP & ACTIONS #####
 
 GettingMap.LoadMapFromFile("map.txt")
 GettingMap.DoorSpawn()

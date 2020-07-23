@@ -4,14 +4,13 @@ PlayerInventory = []*10
 
 BaseItems = {
     "2.1" : "Laptop and Charger",
-    "Usable" : False,
+    "Usable" : True,
     "2.2" : "Pocket Map",
     "Usable" : True,
     "2.3" : "Swiss army Knife",
     "Usable" : True,
     "2.4" : "Flask",
     "Usable" : True,
-    "NbUse" : 4,
     }
 
 LootableItems = {

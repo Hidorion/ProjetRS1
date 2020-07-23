@@ -6,6 +6,8 @@ MaxStats = 100
 PlayerName = ""
 PlayerPosition = {"Y" : 25, "X" : 74} #25/74
 PlayerIcon = "☻"
+NewPlayerPositionX = 0
+NewPlayerPositionY = 0
 
 ##### STATS' ALTERATION #####
 Resting = [6,1,-2]
@@ -26,4 +28,5 @@ GameMessage = ""
 ##### OTHER #####
 GameInProgress = True
 GameProgression = 0
+GameFileName = "SavedGames\CurrentGame"
 
