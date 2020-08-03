@@ -22,3 +22,4 @@ def DiceGame(Player):
     else :
         print("Match nul")
     print("Bon... On s'y remet, j'ai des clés à récupérer")
+    input("Appuies sur Entrée pour continuer")

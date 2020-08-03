@@ -28,36 +28,38 @@ def UseObject (IdEntered):
     """
         This function allows the player to interact with its inventory
     """
+    if not IdEntered:
+        Variables.GameMessage = "Tu as des hallucinations non ?"
     if IdEntered in BaseItems:
         if IdEntered == "0.1":
-            Dice.DiceGame(Variables.PlayersName)
+            Dice.DiceGame(Variables.PlayerName)
         elif IdEntered == "0.2":
             GettingMap.MapsLegend
         elif IdEntered == "0.3":
-            print("Le couteau est plein de sable et est complètement inutilisable")
+            Variables.GameMessage = "Le couteau est plein de sable et est complètement inutilisable"
         elif IdEntered == "0.4":
             print("remplissage bouteille")
     if IdEntered in Keys:
         if IdEntered == "2.1":
             if Keys[IdEntered][2]:
-                print("Tu regardes ta votre clé en bronze")
+                Variables.GameMessage ="Tu regardes ta votre clé en bronze"
             else :
-                print("Il faut continuer de chercher")
+                Variables.GameMessage ="Il faut continuer de chercher"
         if IdEntered == "2.2":
             if Keys[IdEntered][2]:
-                print("Tu regardes ta clé d'argent")
+                Variables.GameMessage ="Tu regardes ta clé d'argent"
             else :
-                print("Il faut continuer de chercher")
+                Variables.GameMessage ="Il faut continuer de chercher"
         if IdEntered == "2.3":
             if Keys[IdEntered][2]:
-                print("Tu regardes ta clé en or")
+                Variables.GameMessage ="Tu regardes ta clé en or"
             else :
-                print("Il faut continuer de chercher")
+                Variables.GameMessage ="Il faut continuer de chercher"
         if IdEntered == "2.4":
             if Keys[IdEntered][2]:
-                print("Tu regardes ta clé USB")
+                Variables.GameMessage ="Tu regardes ta clé USB"
             else :
-                print("Il faut continuer de chercher")
+                Variables.GameMessage ="Il faut continuer de chercher"
 
 
 PlayerInventory = [] #Player's inventory, max 10 pods
