@@ -93,7 +93,10 @@ def FizzBuzzGame(TheListOfPlayers):
     if Stats == "Won":
         print("Félicitations, vous obtenez la clé en \u001b[38;5;220mOr\u001b[0m !")  #Golden key in your pocket !
         Inventory.Keys["2.3"][2] = True
-    
+        print("La tribu te félicite et t'invite à un banquet, il te laisse même utiliser leur hamac pour te reposer")
+        Variables.Santé = Variables.MaxStats
+        Variables.Faim = Variables.MaxStats
+        Variables.Soif = Variables.MaxStats
     if Stats == "Lost" :    #If Player lost the game
         replay = input("Tu as perdu, veux tu rejouer ? Oui ou non ? ").upper()   #Try again ?
         if replay == "OUI":
