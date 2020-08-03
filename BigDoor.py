@@ -9,7 +9,7 @@ import Inventory
 ##### Function to show the picture #####
 def show_imge(path):
     """
-        On affiche une belle photo d'une belle porte. C'est vraiment pour faire beau.
+        We show a beautiful picture of a door.
     """
     image_window = tk.Tk()
     img = ImageTk.PhotoImage(Image.open(path))

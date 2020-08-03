@@ -4,6 +4,9 @@ import Variables
 
 ##### We print the beautiful Sphinx #####
 def SphinxPrep(Filename):   
+    """
+        Printing the sphinx
+    """
     LoadSphinx(Filename)
     print()
     DrawSphinx()
@@ -29,7 +32,7 @@ def LoadSphinx(FileName):
 ##### Drawing the Sphinx #####
 def DrawSphinx():
     """
-        Draw the beautiful Sphinx
+        Draw the beautiful Sphinx and launch the magic number
     """
     for Y in range(len(Variables.Sphinx)):
         for X in range(len(Variables.Sphinx[Y])):        
@@ -42,6 +45,9 @@ def DrawSphinx():
 
 ##### Mysterious Number's Game #####
 def MagicNumber(): 
+    """
+        This function launch the Sphinx' game
+    """
     input("Pour continuer, appuie sur ""Entrée"" ")
     Variables.GameProgression += 1
     SphinxRules = "J'ai choisi un nombre entre 1 et 100 (inclus).\nSi tu le trouves en moins de 20 coups, tu remportes la Clé de \u001b[38;5;136mBronze\u001b[0m !"

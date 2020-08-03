@@ -10,7 +10,7 @@ import random
 
 def RandomCredo():
     """
-        Cette fonction permet d'afficher la porte au départ avec une clé générée aléatoirement
+        This function allows the door to print the credo with a random key
     """
     CredoARandom = "ZEN DE PYTHON"
     CredoRandom = []
@@ -61,7 +61,7 @@ def RandomCredo():
 
 def PlayersNameCesar(PlayerName,Key,CodagePN):
     """
-        Cette fonction permet de changer votre nom en fonction de la clé entré
+        This function use the entered key to code the player's name
     """
     PlayerName = list(PlayerName)
     PlayerNameEnco = []
@@ -98,7 +98,7 @@ def PlayersNameCesar(PlayerName,Key,CodagePN):
 
 def CesarGame():
     """
-        Cette fonction permet d'afficher le jeu.
+        This function launch the game.
     """
     Variables.GameProgression += 1
     Credo = RandomCredo()

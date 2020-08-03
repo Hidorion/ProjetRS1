@@ -37,7 +37,7 @@ def PointChanger (y,x,sample,carte):
     
 def DoorSpawn ():
     """
-        On fait apparaitre les portes.
+        We span the doors.
     """
     PointChanger(3,35,"9",Variables.MapMap) #We add the door for the César Code
     PointChanger(20,8,"8",Variables.MapMap) #We add the door for the FizzBuzz
@@ -65,7 +65,7 @@ MapElements = {
         "CanWalk" : True,
         "Color Start" : "\u001b[38;5;70m",
         "Color End" : "\u001b[0m",
-        "Message" : ". Il est plus dur pour vous d'avancer dans la forêt"},
+        "Message" : ". Vous passez à travers les arbres avec aisance"},
     "M" : {
         "Name" : "Mountain",
         "Image" : "▲",
@@ -79,14 +79,14 @@ MapElements = {
         "CanWalk" : False,
         "Color Start" : "\u001b[36m",
         "Color End" : "\u001b[0m",
-        "Message" : ". Tu peux remplir ta bouteille, mais pas t'y baigner. Le courant est trop fort"},
+        "Message" : ". L'eau y est clair. Le courant est cependant trop fort pour t'y baigner ou remplir ta bouteille"},
     "=" : {
         "Name" : "Bridge",
         "Image" : "═",
         "CanWalk" : True,
         "Color Start" : "\u001b[38;5;94m",
         "Color End" : "\u001b[0m",
-        "Message" : ""},
+        "Message" : ". Un pont naturel mais stable"},
     "~" : {
         "Name" : "Sea",
         "Image" : "≈",

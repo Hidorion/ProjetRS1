@@ -24,4 +24,4 @@ GettingMap.DoorSpawn()
 Clear.ClearConsole()
 GettingMap.DrawMap()
 while Variables.GameInProgress:
-    Actions.GetCharacterAction()
+    Actions.GetPlayerAction()

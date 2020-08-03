@@ -1,6 +1,5 @@
 ##### MODULES #####
 import random
-from time import thread_time
 
 ##### DATA #####
 
@@ -30,6 +29,9 @@ def DiceGame(Player):
     input("Appuies sur Entrée pour continuer")
 
 def DiceAssign(Dice,Value):
+    """
+        This function allows the player to see the dice he has just thrown.
+    """
     One = "┌───────┐\n│       │\n│   ●   │\n│       │\n└───────┘\n"
     Two = "┌───────┐\n│ ●     │\n│       │\n│     ● │\n└───────┘\n"
     Three = "┌───────┐\n│ ●     │\n│   ●   │\n│     ● │\n└───────┘\n"

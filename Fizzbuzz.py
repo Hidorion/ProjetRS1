@@ -5,7 +5,7 @@ import time
 
 def Singe (message,Pos,TheListOfPlayers):
     """
-        Cette fonction permet de gérer si les Singe répondent correctement
+        This function manage the Monkeys' answer
     """
     if "Singe" in TheListOfPlayers[Pos]:
         CheckIfCorrect = random.randint(1,100)
@@ -17,7 +17,7 @@ def Singe (message,Pos,TheListOfPlayers):
 
 def Gorille (message,Pos,TheListOfPlayers):
     """
-        Cette fonction permet de gérer si les Gorilles répondent correctement
+        This function manage the Gorillas' answer
     """
     if "Gorille" in TheListOfPlayers[Pos]:
         CheckIfCorrect = random.randint(1,100)
@@ -29,7 +29,7 @@ def Gorille (message,Pos,TheListOfPlayers):
 
 def Joueur (message,Pos,TheListOfPlayers):
     """
-        Cette fonction permet de gérer si le joueur répond correctement
+        This function manage the Player's answer
     """
     if Variables.PlayerName in TheListOfPlayers[Pos]:
         CheckIfCorrect = random.randint(1,100)
@@ -42,7 +42,7 @@ def Joueur (message,Pos,TheListOfPlayers):
 
 def FizzBuzzGame(TheListOfPlayers):
     """
-        C'est la fonction pour commencer le jeu
+        This function starts the game
     """
     TheListOfPlayers.append(Variables.PlayerName)
     Stats = "Ongoing"

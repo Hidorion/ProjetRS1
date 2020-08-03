@@ -13,7 +13,7 @@ import BigDoor
 
 def ActiveDoors(Y,X):
     """
-        Permet d'activer les portes quand on arrive dessus.
+        Allow the player to activate the doors when reached
     """
     if Y == 3 and X == 35:
         input("Tu te retrouve face à une porte étrange, tu décides de t'approcher. ")
@@ -60,7 +60,7 @@ def SavingProgress():
                 MyFile.write("Map:")
                 MyFile.writelines(Variables.MapMap[LineIndex])
                 MyFile.write("\n")
-            # save character position
+            # save Player position
             MyFile.write(f"X:{Variables.PlayerPosition['X']}\n")
             MyFile.write(f"Y:{Variables.PlayerPosition['Y']}\n")
             MyFile.write(f"Name:{Variables.PlayerName}\n")
@@ -77,6 +77,9 @@ def SavingProgress():
         Variables.GameMessage = "\nSauvegarde de la partie impossible.\n"
 
 def LoadingProgress():
+    """
+        Loading the player's progressions
+    """
     try:
         # open game file in read mode
         with open(Variables.GameFileName, "r", encoding="utf-8") as MyFile:
@@ -87,13 +90,13 @@ def LoadingProgress():
             Line = MyFile.readline()
             # while line contains something
             while Line:
-                # remove last character (\n) at end of line
+                # remove last Player (\n) at end of line
                 Line = Line[:-1]
                 if Line.startswith("Map:"):
                     # this data is part of map
                     MapLine = []
-                    for Character in Line[len("Map:"):]:
-                        MapLine.append(Character)
+                    for Player in Line[len("Map:"):]:
+                        MapLine.append(Player)
                     Variables.MapMap.append(MapLine)
                 elif Line.startswith("X:"):
                     # this data is player position
@@ -134,9 +137,9 @@ def LoadingProgress():
         Variables.GameMessage = "\nChargement de la partie impossible.\n"
         input("Chargement terminé")
 
-def GetCharacterAction():
+def GetPlayerAction():
     """
-        Ask for character action
+        Ask for Player action
     """
 
     # list of possible actions
@@ -148,19 +151,19 @@ def GetCharacterAction():
         Action = input("Que veux tu faire ? ").upper()
 
     # execute action
-    ExecuteCharacterAction(Action)
+    ExecutePlayerAction(Action)
     Clear.ClearConsole()
     GettingMap.DrawMap()
     print(Variables.GameMessage)
     GettingPlayer.GivingPlayersStats()
     GettingPlayer.PlayersDeath()
 
-def ExecuteCharacterAction(Action):
+def ExecutePlayerAction(Action):
     """
         Executes choosen action
     """
     
-    # store new character position
+    # store new Player position
     Variables.NewPlayerPositionX = Variables.PlayerPosition["X"]
     Variables.NewPlayerPositionY = Variables.PlayerPosition["Y"]
 
