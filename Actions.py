@@ -140,7 +140,7 @@ def GetCharacterAction():
     """
 
     # list of possible actions
-    PossibleActions = ["Z", "Q", "S", "D","R","I","HELP","MAP","SAVE","LOAD","28469Cesar","28469Sphinx","28469Buzz","28469Door","28469RaideBoule"]
+    PossibleActions = ["Z", "Q", "S", "D","R","I","HELP","MAP","SAVE","LOAD","JIJICESAR","JIJISPHINX","JIJIBUZZ","JIJIDOOR","JIJIRAIDEBOULE"]
 
     # wait for a valid action
     Action = ""
@@ -205,21 +205,20 @@ def ExecuteCharacterAction(Action):
     elif Action == "LOAD":
         LoadingProgress()
         input("\n")
-
     ##### CHEATING IS BAD !!! #####
-    elif Action == "28469Cesar": 
+    elif Action == "JIJICESAR": 
         Cesar.CesarGame()
         input("\n")
-    elif Action == "28469Sphinx":
+    elif Action == "JIJISPHINX":
         Sphinx.SphinxPrep("TheSphinx.txt")
         input("\n")
-    elif Action == "28469Buzz":
+    elif Action == "JIJIBUZZ":
         Fizzbuzz.FizzBuzzGame(Fizzbuzz.ListOfPlayers)
         input("\n")
-    elif Action == "28469Door":
+    elif Action == "JIJIDOOR":
         BigDoor.CheckKeys()
         input("\n")
-    elif Action == "28469RaideBoule":
+    elif Action == "JIJIRAIDEBOULE":
         Variables.Santé = Variables.MaxStats
         Variables.Faim = Variables.MaxStats
         Variables.Soif = Variables.MaxStats

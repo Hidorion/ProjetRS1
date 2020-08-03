@@ -61,8 +61,13 @@ def UseObject (IdEntered):
             else :
                 Variables.GameMessage ="Il faut continuer de chercher"
 
+def GetObjectInBag ():
+    if LootableItems["1.10"][4] == 1:
+        MaxPodInventory = 20
+    pass
 
-PlayerInventory = [] #Player's inventory, max 10 pods
+MaxPodInventory = 10 #Max 10 pods or 20 if you win the big leather bag
+PlayerInventory = [] #Player's inventory
 
 BaseItems = {
     # ID : [Name, Usable ?, Pods]
@@ -77,12 +82,13 @@ LootableItems = {
     "1.1" : ["Watermelon", True, 1, (0, 2, 8), 0],
     "1.2" : ["Filthy Water", True, 1, (random.randint(-6,-2), 0, 0), 0],
     "1.3" : ["Clear Water", True, 1, (0, 0, 12), 0],
-    "1.4" : ["Camp Bed", False, 1, (2, 0, 1), 0],
+    "1.4" : ["Camp Bed", False, 1, (10, 3, 0), 0],
     "1.5" : ["Aloe Vera", True, 1, (8, 1, 0), 0],
     "1.6" : ["Agrum", True, 1, (4, -1, -1), 0],
     "1.7" : ["Red Berries", True, 0.5, (0, 4, 1), 0],
     "1.8" : ["Banana", True, 1, (0, 10, 0), 0],
-    "1.1" : ["Weird Fruit", True, 1, (-3, 10, -1), 0]
+    "1.9" : ["Weird Fruit", True, 1, (-3, 10, -1), 0],
+    "1.10" : ["Big Leather Bag", False, 0, 10, 0]
     }
     
 Keys = {

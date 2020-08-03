@@ -87,6 +87,9 @@ def MagicNumber():
                 print("Très bien, au revoir !") # Bye
     print ("Félicitations ! La Clé de \u001b[38;5;136mBronze\u001b[0m est à Toi !")
     Inventory.Keys["2.1"][2] = True
+    print ("En repartant, tu vois un lit de camp plié. Tu le récupères")
+    if Inventory.LootableItems["1.4"][4] < 1:
+        Inventory.LootableItems["1.4"][4] = 1
 
 
 

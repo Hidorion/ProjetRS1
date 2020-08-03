@@ -161,7 +161,10 @@ def CesarGame():
 
     print("La porte s'ouvre et devant, sur une pierre taillée, la clé \u001b[38;5;249mArgent\u001b[0m y est posée. Tu la récupères.\n") #Well done
     Inventory.Keys["2.2"][2] = True
-#Base#Trouve la clé qui rendrait le message clair. Utilise là pour me dire comment on t'appelle. \nAinsi, je rendrais à César ce qui appartient à César. Et à toi, la clé d'Argent.
+    print ("En repartant, tu vois un lit de camp plié. Tu le récupères")
+    if Inventory.LootableItems["1.10"][4] < 1:
+        Inventory.LootableItems["1.10"][4] = 1
+#Base
 Alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 
 
