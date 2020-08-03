@@ -86,7 +86,7 @@ def MagicNumber():
             else:
                 print("Très bien, au revoir !") # Bye
     print ("Félicitations ! La Clé de \u001b[38;5;136mBronze\u001b[0m est à Toi !")
-    Inventory.Keys["3.1"][2] = True
+    Inventory.Keys["2.1"][2] = True
 
 
 

@@ -52,14 +52,17 @@ def DrawBigDoor():
             print(f'{Variables.BigDoor[Y][X]}', end="" )
         print()
     input()
-    print(Variables.Credits)
+    
 
 def CheckKeys():
     """
         Just checking that the players got the keys to finish the game
     """
-    if Inventory.Keys["3.1"][2] and Inventory.Keys["3.2"][2] and Inventory.Keys["3.3"][2]:
-        Inventory.Keys["3.4"][2] = True
+    if Inventory.Keys["2.1"][2] and Inventory.Keys["2.2"][2] and Inventory.Keys["2.3"][2]:
+        Inventory.Keys["2.4"][2] = True
         BigDoorPrep("TheBigDoor.txt")
+        print(Variables.Credits)
     else :
         BigDoorPrep("TheBigDoorWrong.txt")
+
+

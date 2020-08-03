@@ -1,3 +1,4 @@
+##### DATA #####
 import Variables
 import GettingMap
 import Clear
@@ -7,7 +8,7 @@ import Inventory
 import Fizzbuzz
 import Sphinx
 import BigDoor
-from Variables import GameProgression, PlayerPosition
+
 
 
 def ActiveDoors(Y,X):
@@ -39,8 +40,10 @@ def Movement():
 
 def Resting():
     """
-
+        Player is resting
     """
+    if Inventory.LootableItems["1.4"][4] == 1:
+        Variables.Resting = Inventory.LootableItems["1.4"][3]
     Variables.Santé=Variables.Santé + Variables.Resting[0]
     Variables.Faim=Variables.Faim + Variables.Resting[1]
     Variables.Soif=Variables.Soif + Variables.Resting[2]
@@ -185,7 +188,7 @@ def ExecuteCharacterAction(Action):
         Resting()
         Variables.GameProgression += 1
     elif Action == "I":
-        Variables.GameMessage = f"\nVous regardez votre inventaire\n {Inventory.Keys} \n {input()} \n"
+        Variables.GameMessage = f"\nVous regardez votre inventaire\n {Inventory.ShowInventory()} \n {input()} \n"
     elif Action == "MAP":
         Variables.GameMessage = f"\nVous regardez votre carte et sa légende\n {GettingMap.MapsLegend} \n"
         input("\n")
