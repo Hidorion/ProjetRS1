@@ -12,7 +12,11 @@ def ShowInventory ():
     """
         This function should show the inventory
     """
-    print(BaseItems)
+    if BaseItems['0.4'][1] :
+        Statut = "Filled up "
+    else :
+        Statut = "Empty "
+    print(f"{BaseItems['0.1'][0]} (0.1)\n{BaseItems['0.2'][0]} (0.2)\n{BaseItems['0.3'][0]} (0.3)\n{Statut}{BaseItems['0.4'][0]} (0.4)\n ")
     print(PlayerInventory)
     if Keys["2.1"][2]:
         print(Keys["2.1"][0])
@@ -38,7 +42,12 @@ def UseObject (IdEntered):
         elif IdEntered == "0.3":
             Variables.GameMessage = "Le couteau est plein de sable et est complètement inutilisable"
         elif IdEntered == "0.4":
-            print("remplissage bouteille")
+            if BaseItems["0.4"][1]:
+                Variables.Soif += LootableItems["1.3"][3][2]
+                print("Tu as bu ta bouteille")
+                BaseItems["0.4"][1] = False
+            else :
+                print("Ta bouteille est vide mais tu peux la remplir près du pont")
     if IdEntered in Keys:
         if IdEntered == "2.1":
             if Keys[IdEntered][2]:
@@ -74,7 +83,7 @@ BaseItems = {
     "0.1" : ["Laptop and Charger", True, 0],
     "0.2" : ["Pocket Map", True, 0],
     "0.3" : ["Swiss army Knife", True, 0],
-    "0.4" : ["Flask", True, 0]
+    "0.4" : ["Flask", False, 0]
     }
 
 LootableItems = {

@@ -30,6 +30,21 @@ def ActiveDoors(Y,X):
     else:
         pass
 
+def ActiveBottle(Y,X):
+    """
+        Allow the player to fill up his bottle 
+    """
+    if Y == 10 and X in (21,22,23,24,25): #Y 10 or 17 / X from 23 to 28
+        if not Inventory.BaseItems["0.4"][1]:
+            Inventory.BaseItems["0.4"][1] = True
+            input("Tu profites d'être sur le pont pour remplir ta bouteille sans danger ")
+    if Y == 17 and X in (21,22,23,24,25):
+        if not Inventory.BaseItems["0.4"][1]:
+            Inventory.BaseItems["0.4"][1] = True
+            input("Tu profites d'être sur le pont pour remplir ta bouteille sans danger ")
+        
+
+
 def Movement():
     """
         Impact the players while moving on the map
@@ -241,3 +256,4 @@ def ExecutePlayerAction(Action):
     Variables.PlayerPosition["X"] = Variables.NewPlayerPositionX
     Variables.PlayerPosition["Y"] = Variables.NewPlayerPositionY
     ActiveDoors(Variables.PlayerPosition["Y"],Variables.PlayerPosition["X"])
+    ActiveBottle(Variables.PlayerPosition["Y"],Variables.PlayerPosition["X"])
