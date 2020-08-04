@@ -28,8 +28,6 @@ def ActiveDoors(Y,X):
     elif Y == 2 and X == 20: #BigDoor
         input("Une lueur semble emergée derrière les arbres, tu décides d'y jeter un oeil. ")
         BigDoor.CheckKeys()
-    else:
-        pass
 
 def ActiveBottle(Y,X):
     """
