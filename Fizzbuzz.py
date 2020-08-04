@@ -1,7 +1,50 @@
+##### MODULES #####
 import random
+import time
+
+##### DATA #####
 import Inventory
 import Variables
-import time
+
+##### Getting the Monkey #####    
+def LoadMonkey(FileName):
+    """
+        Loads the beautiful Monkey
+    """
+    with open(FileName, "r", encoding="utf-8") as MyFile:
+            Y = 0
+            for Line in MyFile:
+                Columns = []
+                X = 0
+                for Character in Line:
+                    if Character == "\n": # ignore line ends
+                        continue
+                    Columns.append(Character) # add character to map
+                    X += 1
+                Variables.Monkey.append(Columns) # add line to map
+                Y += 1
+
+##### We print the beautiful Monkey #####
+def MonkeyPrep(Filename):   
+    """
+        Printing the Monkey
+    """
+    LoadMonkey(Filename)
+    print()
+    DrawMonkey()
+
+##### Drawing the Monkey #####
+def DrawMonkey():
+    """
+        Draw the beautiful Monkey and launch the magic number
+    """
+    for Y in range(len(Variables.Monkey)):
+        for X in range(len(Variables.Monkey[Y])):        
+            print(f'{Variables.Monkey[Y][X]}', end="" )
+        print()
+    input("Enter pour continuer")
+    FizzBuzzGame(ListOfPlayers)
+
 
 def Singe (message,Pos,TheListOfPlayers):
     """

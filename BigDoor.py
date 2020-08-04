@@ -19,7 +19,7 @@ def show_imge(path):
 
 ##### Function to print the Big Door #####
 def BigDoorPrep(Filename):   
-    show_imge("door.jpg")
+    show_imge("Pictures\door.jpg")
     LoadBigDoor(Filename)
     print()
     DrawBigDoor()
@@ -60,9 +60,7 @@ def CheckKeys():
     """
     if Inventory.Keys["2.1"][2] and Inventory.Keys["2.2"][2] and Inventory.Keys["2.3"][2]:
         Inventory.Keys["2.4"][2] = True
-        BigDoorPrep("TheBigDoor.txt")
+        BigDoorPrep("Text\TheBigDoor.txt")
         print(Variables.Credits)
     else :
-        BigDoorPrep("TheBigDoorWrong.txt")
-
-
+        BigDoorPrep("Text\TheBigDoorWrong.txt")

@@ -71,6 +71,9 @@ def UseObject (IdEntered):
                 Variables.GameMessage ="Il faut continuer de chercher"
 
 def GetObjectInBag ():
+    """
+        This function was creating yearning to be the one that put objects to the inventory but it's creator never find a descent way to make it.
+    """
     if LootableItems["1.10"][4] == 1:
         MaxPodInventory = 20
     pass

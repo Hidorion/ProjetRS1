@@ -16,7 +16,7 @@ def DeathPrep(path):
     panel.pack(side="bottom", fill="both", expand="yes")
     image_window.mainloop()
 def Death():   
-    DeathPrep("death.jpg")
+    DeathPrep("Pictures\death.jpg")
     print()
     
 
@@ -62,7 +62,7 @@ def GivingPlayerGlobalStatue():
     print("Tu as actuellement:\n")
     print(" - 100/100 d'énergie.\n")
     print(" - 100/100 de satiété.\n")
-    print(" - 100/100 d'hydratation'.\n")
+    print(" - 100/100 d'hydratation.\n")
     print("Pour te déplacer :\nZ pour aller vers le Nord, S pour le Sud, D pour l'Est et Q pour l'Ouest. Si tu as besoin d'autres informations écrits : Help\n")
     passer = input("Une fois que tu as bien tout compris, appuies sur Entrée ")
     Clear.ClearConsole()

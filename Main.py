@@ -8,8 +8,18 @@ import Clear
 import GettingPlayer
 import GettingMap
 import Actions
+import Menu
 
 ##### IMPORT MODULE #####
+
+##### MENU #####
+Menu.MenuPrint()
+Choice = input("\nChoisir une option :")
+if Choice != 2:
+    pass #Newgame
+else :
+    Actions.LoadingProgress() #LoadGame
+
 
 
 ##### INITIALIZING #####
@@ -19,7 +29,7 @@ GettingPlayer.GivingPlayerGlobalStatue()
 
 ##### MAP & ACTIONS #####
 
-GettingMap.LoadMapFromFile("map.txt")
+GettingMap.LoadMapFromFile("Text\map.txt")
 GettingMap.DoorSpawn()
 Clear.ClearConsole()
 GettingMap.DrawMap()

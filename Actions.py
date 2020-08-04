@@ -15,16 +15,17 @@ def ActiveDoors(Y,X):
     """
         Allow the player to activate the doors when reached
     """
-    if Y == 3 and X == 35:
+    if Y == 3 and X == 35: #Cesar
         input("Tu te retrouve face à une porte étrange, tu décides de t'approcher. ")
         Cesar.CesarGame()
-    elif Y == 20 and X == 8:
-        input(Variables.FizzbuzzMessage)
-        Fizzbuzz.FizzBuzzGame(Fizzbuzz.ListOfPlayers)
-    elif Y == 5 and X == 74:
+    elif Y == 20 and X == 8: #FizzBuzz
+        input()
+        print(Variables.FizzbuzzMessage)
+        Fizzbuzz.MonkeyPrep("Text\monkeys.txt")
+    elif Y == 5 and X == 74: #Sphinx
         input("Un Sphinx se dresse devant la fôret. Il te demande de t'avancer devant lui'. ")
-        Sphinx.SphinxPrep("TheSphinx.txt")
-    elif Y == 2 and X == 20:
+        Sphinx.SphinxPrep("Text\TheSphinx.txt")
+    elif Y == 2 and X == 20: #BigDoor
         input("Une lueur semble emergée derrière les arbres, tu décides d'y jeter un oeil. ")
         BigDoor.CheckKeys()
     else:
@@ -57,7 +58,7 @@ def Resting():
     """
         Player is resting
     """
-    if Inventory.LootableItems["1.4"][4] == 1:
+    if Inventory.LootableItems["1.4"][4] == 1: #Check if player got the bedcamp
         Variables.Resting = Inventory.LootableItems["1.4"][3]
     Variables.Santé=Variables.Santé + Variables.Resting[0]
     Variables.Faim=Variables.Faim + Variables.Resting[1]
@@ -147,7 +148,6 @@ def LoadingProgress():
                 Line = MyFile.readline()
 
             Variables.GameMessage = "\nLa partie a été chargée.\n"
-            
     except:
         Variables.GameMessage = "\nChargement de la partie impossible.\n"
         input("Chargement terminé")
@@ -228,10 +228,10 @@ def ExecutePlayerAction(Action):
         Cesar.CesarGame()
         input("\n")
     elif Action == "JIJISPHINX":
-        Sphinx.SphinxPrep("TheSphinx.txt")
+        Sphinx.SphinxPrep("Text\TheSphinx.txt")
         input("\n")
     elif Action == "JIJIBUZZ":
-        Fizzbuzz.FizzBuzzGame(Fizzbuzz.ListOfPlayers)
+        Fizzbuzz.MonkeyPrep("Text\monkeys.txt")
         input("\n")
     elif Action == "JIJIDOOR":
         BigDoor.CheckKeys()
