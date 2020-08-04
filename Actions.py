@@ -155,15 +155,15 @@ def GetPlayerAction():
         Ask for Player action
     """
 
-    # list of possible actions
+# list of possible actions
     PossibleActions = ["Z", "Q", "S", "D","R","I","HELP","MAP","SAVE","LOAD","JIJICESAR","JIJISPHINX","JIJIBUZZ","JIJIDOOR","JIJIRAIDEBOULE"]
 
-    # wait for a valid action
+# wait for a valid action
     Action = ""
     while Action not in PossibleActions:
         Action = input("Que veux tu faire ? ").upper()
 
-    # execute action
+# execute action
     ExecutePlayerAction(Action)
     Clear.ClearConsole()
     GettingMap.DrawMap()
@@ -214,7 +214,7 @@ def ExecutePlayerAction(Action):
         Variables.GameMessage = f"\nTu regardes la carte et sa légende\n {GettingMap.MapsLegend} \n"
         input("\n")
     elif Action == "HELP":
-        Variables.GameMessage = f"\nZ pour aller vers le Nord, S pour le Sud, D pour l'Est et Q pour l'Ouest\nR pour vous reposer, I pour consulter votre Inventaire, MAP pour ouvrir la légende de la carte\n Save pour sauvegarder la partie et load pour en charger une\n {input()} \n"
+        Variables.GameMessage = f"\nZ pour aller vers le Nord, S pour le Sud, D pour l'Est et Q pour l'Ouest\nR pour vous reposer, I pour consulter votre Inventaire, MAP pour ouvrir la légende de la carte\n SAVE pour sauvegarder la partie et LOAD pour en charger une\n {input()} \n"
     elif Action == "SAVE":
         SavingProgress()
         input("\n")

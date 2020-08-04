@@ -34,7 +34,7 @@ def GettingRules ():
     """
         Giving the player some basic infos.
     """    
-    WelcomeText = f"Bienvenue {Variables.PlayerName} sur cette île mystérieuse.\nTu es ici avec un seul et unique but. Réussir à franchir la Grande Porte ! (۩)\nPour cela tu devras réussir à obtenir 3 clés que tu obtiendras en réussisant les 3 défis de l'île.\n"
+    WelcomeText = f"Bienvenue {Variables.PlayerName} sur cette île mystérieuse.\nTu es ici avec un seul et unique but. Réussir à franchir la Grande Porte ! (\u001b[31m۩\u001b[0m)\nPour cela tu devras réussir à obtenir 3 clés que tu obtiendras en réussisant les 3 défis de l'île.\n"
     SurvivalText = "Cette île n'est pas si paradisiaque.\nSes conditions climatiques risquent de te fatiguer et de t'affamer pendant ton périple\nSans compter sur cette chaleur, tu devras penser à boire pour t'hydrater.\nPour faire court, la mort te guette.\nSi ta Soif, ta Faim ou ta Santé tombe à 0, tu mourras et devras tout recommencer.\n"
     print(WelcomeText)
     print()
@@ -45,8 +45,8 @@ def GettingInfo ():
         Giving the player some useful tips.
     """ 
     CheckTheMap = "Tu as une carte dans ton inventaire. -> I\n"
-    CheckYou="Tu es marqué par ce symbole -> ☻\n"
-    CheckObjects="Sur la carte, il y a les 3 portes (en rouge) derrière lesquelles se trouvent les défis.\n"
+    CheckYou=f"Tu es marqué par ce symbole -> {Variables.PlayerIcon}\n"
+    CheckObjects="Sur la carte, il y a les 3 \u001b[31mportes\u001b[0m (en rouge) derrière lesquelles se trouvent les défis.\n"
     print(CheckTheMap)
     print(CheckYou)
     print(CheckObjects)

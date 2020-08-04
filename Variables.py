@@ -5,7 +5,7 @@ Soif = 100
 MaxStats = 100
 PlayerName = ""
 PlayerPosition = {"Y" : 25, "X" : 74} #25/74
-PlayerIcon = "☻"
+PlayerIcon = "\u001b[38;5;199m☻\u001b[0m"
 NewPlayerPositionX = 0
 NewPlayerPositionY = 0
 
