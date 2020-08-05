@@ -1,3 +1,6 @@
+##### MODULE #####
+import random
+
 ##### DATA #####
 import Variables
 import GettingMap
@@ -46,7 +49,19 @@ def ActiveBottle(Y,X):
             Inventory.BaseItems["0.4"][1] = True
             input("Tu profites d'être sur le pont pour remplir ta bouteille sans danger ")
         
-
+def ActiveObject(Y,X):
+    """
+        Allow the player to get an object
+    """
+    ListOfStuff = ["1.1","1.5","1.6","1.7","1.8","1.9"] #0 to 5
+    if Y == 21 and X == 74: #Test Object
+        Stuff = ListOfStuff[random.randint(0,5)]
+        Inventory.PlayerInventory.append(f"{Inventory.LootableItems[Stuff][5]} {Inventory.LootableItems[Stuff][0]}")
+        Inventory.LootableItems[Stuff][4] += 1
+        Inventory.PlayerInventory[0] += Inventory.LootableItems[Stuff][2]
+        input(f"Tu viens de trouver ça : {Inventory.LootableItems[Stuff][0]} ")
+        Clear.ClearConsole()
+        GettingMap.PointChanger(21,74,"*",Variables.MapMap)
 
 def Movement():
     """
@@ -210,10 +225,10 @@ def ExecutePlayerAction(Action):
         Resting()
         Variables.GameProgression += 1
     elif Action == "I": #INVENTORY
-        Variables.GameMessage = "\nDans ton sac il y a:\n"
+        print("\nDans ton sac il y a:\n")
         Inventory.GetObjectInBag()
         Inventory.ShowInventory()
-        IdEntered = input("Pour intéragir avec un objet, tapes son ID (X.X) ") 
+        IdEntered = input("Pour intéragir avec un objet, tapes son ID (X.X) sinon appuie sur Enter ") 
         Inventory.UseObject(IdEntered)
     elif Action == "MAP": #MAP
         Variables.GameMessage = f"\nTu regardes la carte et sa légende\n {GettingMap.MapsLegend} \n"
@@ -269,3 +284,4 @@ def ExecutePlayerAction(Action):
     Variables.PlayerPosition["Y"] = Variables.NewPlayerPositionY
     ActiveDoors(Variables.PlayerPosition["Y"],Variables.PlayerPosition["X"])
     ActiveBottle(Variables.PlayerPosition["Y"],Variables.PlayerPosition["X"])
+    ActiveObject(Variables.PlayerPosition["Y"],Variables.PlayerPosition["X"])

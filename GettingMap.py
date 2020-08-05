@@ -43,6 +43,12 @@ def DoorSpawn ():
     PointChanger(20,8,"8",Variables.MapMap) #We add the door for the FizzBuzz
     PointChanger(5,74,"7",Variables.MapMap) #We add the door for the Sphinx
 
+def ObjectsSpawn():
+    """
+        Spawning Objects
+    """
+    PointChanger(21,74,"5",Variables.MapMap)
+
 
 MapElements = {
     " " : {
@@ -122,6 +128,13 @@ MapElements = {
         "Color Start" : "\u001b[31m",
         "Color End" : "\u001b[0m",
         "Message" : ". Veux tu tenter d'ouvrir la Grande Porte ? "},
+    "5" : {
+        "Name" : "Grande Porte",
+        "Image" : "©",
+        "CanWalk" : True,
+        "Color Start" : "\u001b[38m",
+        "Color End" : "\u001b[0m",
+        "Message" : ". Tu viens de trouver quelque chose "}
     }
 
 

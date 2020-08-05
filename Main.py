@@ -22,6 +22,7 @@ if Choice == "2": #Load Game
     Variables.PlayerPosition["X"] = Variables.NewPlayerPositionX
     Variables.PlayerPosition["Y"] = Variables.NewPlayerPositionY
     GettingMap.DoorSpawn()
+    GettingMap.ObjectsSpawn()
     Clear.ClearConsole()
     GettingMap.DrawMap()
     GettingPlayer.GivingPlayersStats()          
@@ -35,6 +36,7 @@ else : #Newgame
     ##### MAP & ACTIONS #####
     GettingMap.LoadMapFromFile("Text\map.txt")
     GettingMap.DoorSpawn()
+    GettingMap.ObjectsSpawn()
     Clear.ClearConsole()
     GettingMap.DrawMap()
 while Variables.GameInProgress:
