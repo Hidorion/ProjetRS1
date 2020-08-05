@@ -148,7 +148,7 @@ def FizzBuzzGame(TheListOfPlayers):
             del ListOfPlayersReplay[:]   #We refresh the list
             ListOfPlayersReplay = ["Singe Agile", "Singe Marrant", "Singe Sage", "Singe Grand", "Singe Mince", "Chef Gorille", "Singe Farceur", "Singe énieur", "Singe Comunimaj", "Garo Gorille"]
             FizzBuzzGame(ListOfPlayersReplay)
-    print()
+    input()
 
 ListOfPlayers = ["Singe Agile", "Singe Marrant", "Singe Sage", "Singe Grand", "Singe Mince", "Chef Gorille", "Singe Farceur", "Singe énieur", "Singe Comunimaj", "Garo Gorille"]
 

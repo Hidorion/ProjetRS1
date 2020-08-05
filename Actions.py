@@ -18,16 +18,20 @@ def ActiveDoors(Y,X):
     if Y == 3 and X == 35: #Cesar
         input("Tu te retrouve face à une porte étrange, tu décides de t'approcher. ")
         Cesar.CesarGame()
+        Clear.ClearConsole()
     elif Y == 20 and X == 8: #FizzBuzz
         input()
         print(Variables.FizzbuzzMessage)
         Fizzbuzz.MonkeyPrep("Text\monkeys.txt")
+        Clear.ClearConsole()
     elif Y == 5 and X == 74: #Sphinx
         input("Un Sphinx se dresse devant la fôret. Il te demande de t'avancer devant lui'. ")
         Sphinx.SphinxPrep("Text\TheSphinx.txt")
+        Clear.ClearConsole()
     elif Y == 2 and X == 20: #BigDoor
         input("Une lueur semble emergée derrière les arbres, tu décides d'y jeter un oeil. ")
         BigDoor.CheckKeys()
+        Clear.ClearConsole()
 
 def ActiveBottle(Y,X):
     """
@@ -156,7 +160,7 @@ def GetPlayerAction():
     """
 
 # list of possible actions
-    PossibleActions = ["Z", "Q", "S", "D","R","I","HELP","MAP","SAVE","LOAD","JIJICESAR","JIJISPHINX","JIJIBUZZ","JIJIDOOR","JIJIRAIDEBOULE"]
+    PossibleActions = ["Z", "Q", "S", "D","R","I","HELP","MAP","SAVE","LOAD","JIJICESAR","JIJISPHINX","JIJIBUZZ","JIJIDOOR","JIJIRAIDEBOULE","JIJIKEYKEYKEY"]
 
 # wait for a valid action
     Action = ""
@@ -181,64 +185,74 @@ def ExecutePlayerAction(Action):
     Variables.NewPlayerPositionY = Variables.PlayerPosition["Y"]
 
     # prepare action
-    if Action == "Z":
+    if Action == "Z": #UP
         Variables.NewPlayerPositionY -= 1
         Variables.GameMessage = f"\nTu te déplaces vers le Nord {GettingMap.MapElements[Variables.MapMap[Variables.NewPlayerPositionY][Variables.NewPlayerPositionX]]['Message']}\n"
         Movement()
         Variables.GameProgression += 1
-    elif Action == "S":
+    elif Action == "S": #DOWN
         Variables.NewPlayerPositionY += 1
         Variables.GameMessage = f"\nTu te déplaces vers le Sud {GettingMap.MapElements[Variables.MapMap[Variables.NewPlayerPositionY][Variables.NewPlayerPositionX]]['Message']}\n"
         Movement()
         Variables.GameProgression += 1
-    elif Action == "Q":
+    elif Action == "Q": #LEFT
         Variables.NewPlayerPositionX -= 1
         Variables.GameMessage = f"\nTu te déplaces vers l'Ouest {GettingMap.MapElements[Variables.MapMap[Variables.NewPlayerPositionY][Variables.NewPlayerPositionX]]['Message']}\n"
         Movement()
         Variables.GameProgression += 1
-    elif Action == "D":
+    elif Action == "D": #RIGHT
         Variables.NewPlayerPositionX += 1
         Variables.GameMessage = f"\nTu te déplaces vers l'Est' {GettingMap.MapElements[Variables.MapMap[Variables.NewPlayerPositionY][Variables.NewPlayerPositionX]]['Message']}\n"
         Movement()
         Variables.GameProgression += 1
-    elif Action == "R":
+    elif Action == "R": #REST
         Variables.GameMessage = "\nTu te reposes pendant une heure\n"
         Resting()
         Variables.GameProgression += 1
-    elif Action == "I":
-        Variables.GameMessage = "\n"
+    elif Action == "I": #INVENTORY
+        Variables.GameMessage = "\nDans ton sac il y a:\n"
+        Inventory.GetObjectInBag()
         Inventory.ShowInventory()
         IdEntered = input("Pour intéragir avec un objet, tapes son ID (X.X) ") 
         Inventory.UseObject(IdEntered)
-    elif Action == "MAP":
+    elif Action == "MAP": #MAP
         Variables.GameMessage = f"\nTu regardes la carte et sa légende\n {GettingMap.MapsLegend} \n"
         input("\n")
-    elif Action == "HELP":
+    elif Action == "HELP": #HELP
         Variables.GameMessage = f"\nZ pour aller vers le Nord, S pour le Sud, D pour l'Est et Q pour l'Ouest\nR pour vous reposer, I pour consulter votre Inventaire, MAP pour ouvrir la légende de la carte\n SAVE pour sauvegarder la partie et LOAD pour en charger une\n {input()} \n"
-    elif Action == "SAVE":
+    elif Action == "SAVE": #SAVE
         SavingProgress()
         input("\n")
-    elif Action == "LOAD":
+    elif Action == "LOAD": #LOAD
         LoadingProgress()
         input("\n")
     ##### CHEATING IS BAD !!! #####
-    elif Action == "JIJICESAR": 
-        Cesar.CesarGame()
+    elif Action == "JIJICESAR": #GO TO CESAR (Y=3,X=35)
+        Variables.NewPlayerPositionY = 3
+        Variables.NewPlayerPositionX = 35
         input("\n")
-    elif Action == "JIJISPHINX":
-        Sphinx.SphinxPrep("Text\TheSphinx.txt")
+    elif Action == "JIJISPHINX": #GO TO SPHINX (Y=5,X=74)
+        Variables.NewPlayerPositionY = 5
+        Variables.NewPlayerPositionX = 74
         input("\n")
-    elif Action == "JIJIBUZZ":
-        Fizzbuzz.MonkeyPrep("Text\monkeys.txt")
+    elif Action == "JIJIBUZZ": #GO TO FIZZBUZZ (Y=20,X=8)
+        Variables.NewPlayerPositionY = 20
+        Variables.NewPlayerPositionX = 8
         input("\n")
-    elif Action == "JIJIDOOR":
-        BigDoor.CheckKeys()
+    elif Action == "JIJIDOOR": #GO TO THE BIG DOOR (Y=2,X=20)
+        Variables.NewPlayerPositionY = 2
+        Variables.NewPlayerPositionX = 20
         input("\n")
-    elif Action == "JIJIRAIDEBOULE":
+    elif Action == "JIJIRAIDEBOULE": #GET TO MAX STATS
         Variables.Santé = Variables.MaxStats
         Variables.Faim = Variables.MaxStats
         Variables.Soif = Variables.MaxStats
         input("\n")
+    elif Action == "JIJIKEYKEYKEY": #GET ALL THE KEYS
+        Inventory.Keys["2.1"][2] = True
+        Inventory.Keys["2.2"][2] = True 
+        Inventory.Keys["2.3"][2] = True
+        input("\n")        
     print(Variables.GameMessage)
         
 

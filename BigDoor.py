@@ -5,6 +5,7 @@ from PIL import ImageTk, Image
 ##### DATA #####
 import Variables
 import Inventory
+import Clear
 
 ##### Function to show the picture #####
 def show_imge(path):
@@ -61,6 +62,9 @@ def CheckKeys():
     if Inventory.Keys["2.1"][2] and Inventory.Keys["2.2"][2] and Inventory.Keys["2.3"][2]:
         Inventory.Keys["2.4"][2] = True
         BigDoorPrep("Text\TheBigDoor.txt")
+        Clear.ClearConsole()
         print(Variables.Credits)
+        input()
+        Variables.GameInProgress = False
     else :
         BigDoorPrep("Text\TheBigDoorWrong.txt")

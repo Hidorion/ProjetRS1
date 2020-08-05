@@ -17,7 +17,7 @@ def ShowInventory ():
     else :
         Statut = "Empty "
     print(f"{BaseItems['0.1'][0]} (0.1)\n{BaseItems['0.2'][0]} (0.2)\n{BaseItems['0.3'][0]} (0.3)\n{Statut}{BaseItems['0.4'][0]} (0.4)\n ")
-    print(PlayerInventory)
+    print(f"{PlayerInventory}\n")
     if Keys["2.1"][2]:
         print(Keys["2.1"][0])
     if Keys["2.2"][2]:
@@ -74,15 +74,22 @@ def GetObjectInBag ():
     """
         This function was creating yearning to be the one that put objects to the inventory but it's creator never find a descent way to make it.
     """
-    if LootableItems["1.10"][4] == 1:
+    if LootableItems["1.10"][4] == 1: #Max 10 pods or 20 if you win the big leather bag
         MaxPodInventory = 20
-    pass
+    else:
+        MaxPodInventory = 10
+    if PlayerInventory[0] <= MaxPodInventory:
+        if LootableItems["1.4"][4] == 1:
+            LootableItems["1.4"][4] = "1"
+            PlayerInventory.append(LootableItems["1.4"][0])
+            PlayerInventory[0] += LootableItems["1.4"][2]
 
-MaxPodInventory = 10 #Max 10 pods or 20 if you win the big leather bag
-PlayerInventory = [] #Player's inventory
+MaxPodInventory = 10
+PlayerInventory = [0 , f"/{MaxPodInventory}"] #Player's inventory [0] = Number of Pods
+
 
 BaseItems = {
-    # ID : [Name, Usable ?, Pods]
+    # ID : [0 Name, 1 Usable ?,3 Pods]
     "0.1" : ["Laptop and Charger", True, 0],
     "0.2" : ["Pocket Map", True, 0],
     "0.3" : ["Swiss army Knife", True, 0],
@@ -90,7 +97,7 @@ BaseItems = {
     }
 
 LootableItems = {
-    # ID : [Name, Usable ?, Pods, Effects, Stock]
+    # ID : [0 Name, 1 Usable ?, 2 Pods, 3 Effects, 4 Stock]
     "1.1" : ["Watermelon", True, 1, (0, 2, 8), 0],
     "1.2" : ["Filthy Water", True, 1, (random.randint(-6,-2), 0, 0), 0],
     "1.3" : ["Clear Water", True, 1, (0, 0, 12), 0],
@@ -104,7 +111,7 @@ LootableItems = {
     }
     
 Keys = {
-    #ID : [Name, Usable ?]
+    #ID : [ 0 Name, 1 Usable ? 2 In bag ?]
     "2.1" : ["Bronze Key", False, False],
     "2.2" : ["Silver Key", False, False],
     "2.3" : ["Golden Key", False, False],

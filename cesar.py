@@ -164,6 +164,7 @@ def CesarGame():
     print ("En repartant, tu vois un grand sac en cuir vide. Tu le récupères")
     if Inventory.LootableItems["1.10"][4] < 1:
         Inventory.LootableItems["1.10"][4] = 1
+    input()
 #Base
 Alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 

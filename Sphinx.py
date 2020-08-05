@@ -96,6 +96,7 @@ def MagicNumber():
     print ("En repartant, tu vois un lit de camp plié. Tu le récupères")
     if Inventory.LootableItems["1.4"][4] < 1:
         Inventory.LootableItems["1.4"][4] = 1
+    input()
 
 
 
