@@ -82,14 +82,18 @@ def GetObjectInBag ():
     """
         This function was creating yearning to be the one that put objects to the inventory but it's creator never find a descent way to make it.
     """
-    if PlayerInventory[0] <= MaxPodInventory:
+    if PlayerInventory[0] <= Checkbag():
         if LootableItems["1.4"][4] == 1:
             LootableItems["1.4"][4] = "1"
             PlayerInventory.append(LootableItems["1.4"][0])
             PlayerInventory[0] += LootableItems["1.4"][2]
 
-MaxPodInventory = 10
-PlayerInventory = [0 , f"/{MaxPodInventory}"] #Player's inventory [0] = Number of Pods
+def Checkbag ():
+    if LootableItems["1.10"][4] == 1 :
+        MaxPodInventory = 20
+    else :
+        MaxPodInventory = 10
+    return MaxPodInventory
 
 
 BaseItems = {
@@ -122,3 +126,5 @@ Keys = {
     "2.4" : ["USB Key", False, False,"2.4"]
     }
 
+
+PlayerInventory = [0 , f"/{Checkbag()}"] #Player's inventory [0] = Number of Pods

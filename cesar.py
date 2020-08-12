@@ -162,9 +162,7 @@ def CesarGame():
     print("La porte s'ouvre et devant, sur une pierre taillée, la clé \u001b[38;5;249mArgent\u001b[0m y est posée. Tu la récupères.\n") #Well done
     Inventory.Keys["2.2"][2] = True
     print ("En repartant, tu vois un grand sac en cuir vide. Tu le récupères")
-    if Inventory.LootableItems["1.10"][4] < 1:
-        Inventory.LootableItems["1.10"][4] = 1
-        Inventory.MaxPodInventory = 20
+    Inventory.LootableItems["1.10"][4] == 1
     input()
 #Base
 Alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]

@@ -226,6 +226,7 @@ def ExecutePlayerAction(Action):
         Variables.GameProgression += 1
     elif Action == "I": #INVENTORY
         print("\nDans ton sac il y a:\n")
+        Inventory.Checkbag()
         Inventory.GetObjectInBag()
         Inventory.ShowInventory()
         IdEntered = input("Pour intéragir avec un objet, tapes son ID (X.X) sinon appuie sur Enter ") 
